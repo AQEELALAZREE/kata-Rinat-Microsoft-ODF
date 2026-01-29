@@ -1,0 +1,26 @@
+# Python dependencies for Excel Formula Engine project
+
+# Excel file handling
+openpyxl>=3.1.0
+
+# Formula parsing
+lark-parser>=1.1.0
+
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+
+# Excel automation (platform-specific)
+# Windows: uncomment the line below
+# pywin32>=306
+
+# macOS: uncomment the line below
+# py-appscript>=1.2.2
+
+# Code quality
+black>=23.0.0
+pylint>=3.0.0
+mypy>=1.5.0
+
+# Documentation
+sphinx>=7.0.0
