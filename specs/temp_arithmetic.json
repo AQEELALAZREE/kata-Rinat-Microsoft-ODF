@@ -1,0 +1,86 @@
+{
+    "version": 1,
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Sheet1",
+            "cells": {
+                "A1": {
+                    "value": "Test"
+                },
+                "A2": {
+                    "value": "Addition"
+                },
+                "A3": {
+                    "value": "Subtraction"
+                },
+                "A4": {
+                    "value": "Multiplication"
+                },
+                "A5": {
+                    "value": "Division"
+                },
+                "A6": {
+                    "value": "Division by zero"
+                },
+                "B1": {
+                    "value": "Result"
+                },
+                "B2": {
+                    "value": 3,
+                    "formula": "=C2+D2"
+                },
+                "B3": {
+                    "value": 7,
+                    "formula": "=C3-D3"
+                },
+                "B4": {
+                    "value": 12,
+                    "formula": "=C4*D4"
+                },
+                "B5": {
+                    "value": 2,
+                    "formula": "=C5/D5"
+                },
+                "B6": {
+                    "formula": "=C6/D6",
+                    "error": "#DIV/0!"
+                },
+                "C2": {
+                    "value": 1
+                },
+                "C3": {
+                    "value": 10
+                },
+                "C4": {
+                    "value": 3
+                },
+                "C5": {
+                    "value": 10
+                },
+                "C6": {
+                    "value": 1
+                },
+                "D2": {
+                    "value": 2
+                },
+                "D3": {
+                    "value": 3
+                },
+                "D4": {
+                    "value": 4
+                },
+                "D5": {
+                    "value": 5
+                },
+                "D6": {
+                    "value": 0
+                }
+            }
+        }
+    ]
+}

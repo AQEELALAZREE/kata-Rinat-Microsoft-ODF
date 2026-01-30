@@ -1,0 +1,47 @@
+?start: formula
+
+formula: "=" expression
+
+?expression: comparison
+
+?comparison: concat (COMP_OP concat)*
+
+?concat: add_expr ("&" add_expr)*
+
+?add_expr: mult_expr ((PLUS|MINUS) mult_expr)*
+
+?mult_expr: power_expr ((STAR|SLASH) power_expr)*
+
+?power_expr: unary_expr (POWER unary_expr)*
+
+?unary_expr: (PLUS|MINUS)? atom -> unary_expr
+
+?atom: NUMBER           -> number
+     | STRING           -> string
+     | "TRUE"           -> true
+     | "FALSE"          -> false
+     | CELL_REF         -> cell_reference
+     | array_literal    -> array
+     | function_call    -> function
+     | "(" expression ")"
+
+array_literal: "{" array_row (";" array_row)* "}"
+array_row: expression ("," expression)*
+
+function_call: FUNCTION "(" [arguments] ")"
+arguments: expression ("," expression)*
+
+CELL_REF: /\$?[A-Z]+\$?[0-9]+/
+FUNCTION: /[A-Z][A-Z0-9_.]*/
+PLUS: "+"
+MINUS: "-"
+STAR: "*"
+SLASH: "/"
+POWER: "^"
+COMP_OP: "=" | "<>" | "<" | ">" | "<=" | ">="
+
+STRING: /"([^"]|"")*"/
+
+%import common.NUMBER
+%import common.WS
+%ignore WS
