@@ -1,0 +1,221 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "SUBSTITUTE (happy)"
+        },
+        "A11": {
+          "value": "SUBSTITUTE (edge: instance)"
+        },
+        "A12": {
+          "value": "REPLACE (happy)"
+        },
+        "A13": {
+          "value": "REPLACE (edge: start past end)"
+        },
+        "A14": {
+          "value": "LOWER (happy)"
+        },
+        "A15": {
+          "value": "LOWER (edge: empty)"
+        },
+        "A16": {
+          "value": "UPPER (happy)"
+        },
+        "A17": {
+          "value": "UPPER (edge: numeric text)"
+        },
+        "A18": {
+          "value": "PROPER (happy)"
+        },
+        "A19": {
+          "value": "PROPER (edge: alphanumeric)"
+        },
+        "A2": {
+          "value": "RIGHT (happy)"
+        },
+        "A20": {
+          "value": "TRIM (happy)"
+        },
+        "A21": {
+          "value": "TRIM (edge: all spaces)"
+        },
+        "A3": {
+          "value": "RIGHT (edge: length)"
+        },
+        "A4": {
+          "value": "MID (happy)"
+        },
+        "A5": {
+          "value": "MID (edge: start past end)"
+        },
+        "A6": {
+          "value": "FIND (happy)"
+        },
+        "A7": {
+          "value": "FIND (edge: not found)"
+        },
+        "A8": {
+          "value": "SEARCH (happy, case-insensitive)"
+        },
+        "A9": {
+          "value": "SEARCH (edge: not found)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": "baNANA",
+          "formula": "=SUBSTITUTE(C10,\"na\",\"NA\")"
+        },
+        "B11": {
+          "value": "banaNA",
+          "formula": "=SUBSTITUTE(C11,\"na\",\"NA\",2)"
+        },
+        "B12": {
+          "value": "1ab45",
+          "formula": "=REPLACE(C12,2,2,\"ab\")"
+        },
+        "B13": {
+          "value": "12345ab",
+          "formula": "=REPLACE(C13,10,2,\"ab\")"
+        },
+        "B14": {
+          "value": "mixed",
+          "formula": "=LOWER(C14)"
+        },
+        "B15": {
+          "value": "",
+          "formula": "=LOWER(C15)"
+        },
+        "B16": {
+          "value": "MIXED",
+          "formula": "=UPPER(C16)"
+        },
+        "B17": {
+          "value": "123",
+          "formula": "=UPPER(C17)"
+        },
+        "B18": {
+          "value": "Hello World",
+          "formula": "=PROPER(C18)"
+        },
+        "B19": {
+          "value": "123Abc",
+          "formula": "=PROPER(C19)"
+        },
+        "B2": {
+          "value": "llz",
+          "formula": "=RIGHT(C2,3)"
+        },
+        "B20": {
+          "value": "spaced out",
+          "formula": "=TRIM(C20)"
+        },
+        "B21": {
+          "value": "",
+          "formula": "=TRIM(C21)"
+        },
+        "B3": {
+          "value": "Hi",
+          "formula": "=RIGHT(C3,5)"
+        },
+        "B4": {
+          "value": "xam",
+          "formula": "=MID(C4,2,3)"
+        },
+        "B5": {
+          "value": "",
+          "formula": "=MID(C5,10,2)"
+        },
+        "B6": {
+          "value": 4,
+          "formula": "=FIND(\"cat\",C6)"
+        },
+        "B7": {
+          "formula": "=FIND(\"z\",C7)",
+          "error": "#VALUE!"
+        },
+        "B8": {
+          "value": 1,
+          "formula": "=SEARCH(\"CELL\",C8)"
+        },
+        "B9": {
+          "formula": "=SEARCH(\"z\",C9)",
+          "error": "#VALUE!"
+        },
+        "C10": {
+          "value": "banana"
+        },
+        "C11": {
+          "value": "banana"
+        },
+        "C12": {
+          "value": "12345"
+        },
+        "C13": {
+          "value": "12345"
+        },
+        "C14": {
+          "value": "MiXeD"
+        },
+        "C15": {
+          "value": ""
+        },
+        "C16": {
+          "value": "MiXeD"
+        },
+        "C17": {
+          "value": "123"
+        },
+        "C18": {
+          "value": "hello world"
+        },
+        "C19": {
+          "value": "123abc"
+        },
+        "C2": {
+          "value": "Cellz"
+        },
+        "C20": {
+          "value": "  spaced  out "
+        },
+        "C21": {
+          "value": " "
+        },
+        "C3": {
+          "value": "Hi"
+        },
+        "C4": {
+          "value": "Example"
+        },
+        "C5": {
+          "value": "Test"
+        },
+        "C6": {
+          "value": "concatenate"
+        },
+        "C7": {
+          "value": "cat"
+        },
+        "C8": {
+          "value": "cellz"
+        },
+        "C9": {
+          "value": "cat"
+        }
+      }
+    }
+  ]
+}

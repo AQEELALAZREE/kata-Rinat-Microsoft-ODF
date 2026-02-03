@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "Operator precedence"},
+        "A3": {"value": "Parentheses override precedence"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 14, "formula": "=2+3*4"},
+        "B3": {"value": 20, "formula": "=(2+3)*4"}
+      }
+    }
+  ]
+}

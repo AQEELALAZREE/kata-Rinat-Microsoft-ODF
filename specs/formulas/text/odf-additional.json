@@ -1,0 +1,219 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "EXACT (happy)"
+        },
+        "A11": {
+          "value": "EXACT (edge: case mismatch)"
+        },
+        "A12": {
+          "value": "TEXT (happy)"
+        },
+        "A13": {
+          "value": "TEXT (edge: text passthrough)"
+        },
+        "A14": {
+          "value": "VALUE (happy)"
+        },
+        "A15": {
+          "value": "VALUE (edge: invalid)"
+        },
+        "A16": {
+          "value": "CONCATENATE (happy)"
+        },
+        "A17": {
+          "value": "CONCATENATE (edge: empty prefix)"
+        },
+        "A18": {
+          "value": "T (happy)"
+        },
+        "A19": {
+          "value": "T (edge: non-text)"
+        },
+        "A2": {
+          "value": "CHAR (happy)"
+        },
+        "A3": {
+          "value": "CHAR (edge: out of range)"
+        },
+        "A4": {
+          "value": "CODE (happy)"
+        },
+        "A5": {
+          "value": "CODE (edge: empty)"
+        },
+        "A6": {
+          "value": "CLEAN (happy)"
+        },
+        "A7": {
+          "value": "CLEAN (edge: no control chars)"
+        },
+        "A8": {
+          "value": "REPT (happy)"
+        },
+        "A9": {
+          "value": "REPT (edge: zero count)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": true,
+          "formula": "=EXACT(C10,D10)"
+        },
+        "B11": {
+          "value": false,
+          "formula": "=EXACT(C11,D11)"
+        },
+        "B12": {
+          "value": "0.012",
+          "formula": "=TEXT(C12,\"000.0\")"
+        },
+        "B13": {
+          "value": "abc",
+          "formula": "=TEXT(C13,\"@\")"
+        },
+        "B14": {
+          "value": 45658,
+          "formula": "=VALUE(C14)"
+        },
+        "B15": {
+          "formula": "=VALUE(C15)",
+          "error": "#VALUE!"
+        },
+        "B16": {
+          "value": "Cellz",
+          "formula": "=CONCATENATE(C16,D16)"
+        },
+        "B17": {
+          "value": "A",
+          "formula": "=CONCATENATE(C17,D17)"
+        },
+        "B18": {
+          "value": "hello",
+          "formula": "=T(C18)"
+        },
+        "B19": {
+          "value": "",
+          "formula": "=T(C19)"
+        },
+        "B2": {
+          "value": "A",
+          "formula": "=CHAR(C2)"
+        },
+        "B3": {
+          "formula": "=CHAR(C3)",
+          "error": "#VALUE!"
+        },
+        "B4": {
+          "value": 65,
+          "formula": "=CODE(C4)"
+        },
+        "B5": {
+          "formula": "=CODE(C5)",
+          "error": "#VALUE!"
+        },
+        "B6": {
+          "value": "Hi�!",
+          "formula": "=CLEAN(C6)"
+        },
+        "B7": {
+          "value": "Normal",
+          "formula": "=CLEAN(C7)"
+        },
+        "B8": {
+          "value": "ababab",
+          "formula": "=REPT(C8,D8)"
+        },
+        "B9": {
+          "value": "",
+          "formula": "=REPT(C9,D9)"
+        },
+        "C10": {
+          "value": "Test"
+        },
+        "C11": {
+          "value": "Test"
+        },
+        "C12": {
+          "value": 12.3
+        },
+        "C13": {
+          "value": "abc"
+        },
+        "C14": {
+          "value": " 1.25 "
+        },
+        "C15": {
+          "value": "abc"
+        },
+        "C16": {
+          "value": "Cell"
+        },
+        "C17": {
+          "value": ""
+        },
+        "C18": {
+          "value": "hello"
+        },
+        "C19": {
+          "value": 5
+        },
+        "C2": {
+          "value": 65
+        },
+        "C3": {
+          "value": 0
+        },
+        "C4": {
+          "value": "A"
+        },
+        "C5": {
+          "value": ""
+        },
+        "C6": {
+          "value": "Hi\u0007!"
+        },
+        "C7": {
+          "value": "Normal"
+        },
+        "C8": {
+          "value": "ab"
+        },
+        "C9": {
+          "value": "ab"
+        },
+        "D10": {
+          "value": "Test"
+        },
+        "D11": {
+          "value": "test"
+        },
+        "D16": {
+          "value": "z"
+        },
+        "D17": {
+          "value": "A"
+        },
+        "D8": {
+          "value": 3
+        },
+        "D9": {
+          "value": 0
+        }
+      }
+    }
+  ]
+}

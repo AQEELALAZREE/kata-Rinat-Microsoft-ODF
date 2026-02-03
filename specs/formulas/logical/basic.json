@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Test"
+        },
+        "A2": {
+          "value": "AND(true,true)"
+        },
+        "A3": {
+          "value": "OR(false,true)"
+        },
+        "A4": {
+          "value": "NOT(false)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B2": {
+          "value": true,
+          "formula": "=AND(C2,D2)"
+        },
+        "B3": {
+          "value": true,
+          "formula": "=OR(C3,D3)"
+        },
+        "B4": {
+          "value": true,
+          "formula": "=NOT(C4)"
+        },
+        "C2": {
+          "value": true
+        },
+        "C3": {
+          "value": false
+        },
+        "C4": {
+          "value": false
+        },
+        "D2": {
+          "value": true
+        },
+        "D3": {
+          "value": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,739 @@
+Found 36 spec files.
+============================================================
+
+[SPEC] arrays-matrices/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =SUM({1,2,3}) -> 6.0 (Expected: 6)
+✓ B3: =INDEX(TRANSPOSE({1,2,3}),1) -> 1.0 (Expected: 1)
+✓ B4: =INDEX({4,5},2) -> 5.0 (Expected: 5)
+----------------------------------------
+Results: 3 passed, 0 failed out of 3 spec formulas.
+
+[SPEC] arrays-matrices/odf-matrix.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =SUMPRODUCT(C2:D3,E2:F3) -> 70.0 (Expected: 70)
+✓ B3: =SUMPRODUCT(C2:D3,E2:E3) -> #VALUE! (Expected: #VALUE!)
+✗ B4: =SUMX2MY2(C2:D3,E2:F3) -> #ERROR: #NAME? (Unknown function: SUMX2MY2) (Expected: -144)
+✗ B5: =SUMX2MY2(C2:D3,E2:E3) -> #ERROR: #NAME? (Unknown function: SUMX2MY2) (Expected: #N/A)
+✗ B6: =SUMX2PY2(C2:D3,E2:F3) -> #ERROR: #NAME? (Unknown function: SUMX2PY2) (Expected: 204)
+✗ B7: =SUMX2PY2(C2:D3,E2:E3) -> #ERROR: #NAME? (Unknown function: SUMX2PY2) (Expected: #N/A)
+✗ B8: =SUMXMY2(C2:D3,E2:F3) -> #ERROR: #NAME? (Unknown function: SUMXMY2) (Expected: 64)
+✗ B9: =SUMXMY2(C2:D3,E2:E3) -> #ERROR: #NAME? (Unknown function: SUMXMY2) (Expected: #N/A)
+✗ B10: =INDEX(MMULT(C6:D7,E6:F7),1,2) -> #ERROR: #NAME? (Unknown function: MMULT) (Expected: 22)
+✗ B11: =MMULT(C6:D7,E6:F6) -> #ERROR: #NAME? (Unknown function: MMULT) (Expected: #VALUE!)
+✗ B12: =MDETERM(C10:D11) -> #ERROR: #NAME? (Unknown function: MDETERM) (Expected: -2)
+✗ B13: =MDETERM(C10:E11) -> #ERROR: #NAME? (Unknown function: MDETERM) (Expected: #VALUE!)
+✗ B14: =INDEX(MINVERSE(C14:D15),1,1) -> #ERROR: #NAME? (Unknown function: MINVERSE) (Expected: 0.6000000000000001)
+✗ B15: =MINVERSE(C16:D17) -> #ERROR: #NAME? (Unknown function: MINVERSE) (Expected: #NUM!)
+----------------------------------------
+Results: 2 passed, 12 failed out of 14 spec formulas.
+
+[SPEC] formulas/arithmetic/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =C2+D2 -> 3.0 (Expected: 3)
+✓ B3: =C3-D3 -> 7.0 (Expected: 7)
+✓ B4: =C4*D4 -> 12.0 (Expected: 12)
+✓ B5: =C5/D5 -> 2.0 (Expected: 2)
+✓ B6: =C6/D6 -> #DIV/0! (Expected: #DIV/0!)
+----------------------------------------
+Results: 5 passed, 0 failed out of 5 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-base-conversion.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =BASE(C2,D2) -> #ERROR: #NAME? (Unknown function: BASE) (Expected: ZAP)
+✗ B3: =BASE(C3,D3,E3) -> #ERROR: #NAME? (Unknown function: BASE) (Expected: 00001111)
+✗ B4: =DECIMAL(C4,D4) -> #ERROR: #NAME? (Unknown function: DECIMAL) (Expected: 45745)
+✗ B5: =DECIMAL(C5,D5) -> #ERROR: #NAME? (Unknown function: DECIMAL) (Expected: #NUM!)
+✗ B6: =BIN2DEC(C6) -> #ERROR: #NAME? (Unknown function: BIN2DEC) (Expected: 10)
+✗ B7: =BIN2DEC(C7) -> #ERROR: #NAME? (Unknown function: BIN2DEC) (Expected: #NUM!)
+✗ B8: =BIN2HEX(C8) -> #ERROR: #NAME? (Unknown function: BIN2HEX) (Expected: F)
+✗ B9: =BIN2HEX(C9,D9) -> #ERROR: #NAME? (Unknown function: BIN2HEX) (Expected: 000F)
+✗ B10: =BIN2OCT(C10) -> #ERROR: #NAME? (Unknown function: BIN2OCT) (Expected: 40)
+✗ B11: =BIN2OCT(C11,D11) -> #ERROR: #NAME? (Unknown function: BIN2OCT) (Expected: 0040)
+✗ B12: =DEC2BIN(C12) -> #ERROR: #NAME? (Unknown function: DEC2BIN) (Expected: 1101)
+✗ B13: =DEC2BIN(C13,D13) -> #ERROR: #NAME? (Unknown function: DEC2BIN) (Expected: 00001101)
+✗ B14: =DEC2HEX(C14) -> #ERROR: #NAME? (Unknown function: DEC2HEX) (Expected: FF)
+✗ B15: =DEC2HEX(C15,D15) -> #ERROR: #NAME? (Unknown function: DEC2HEX) (Expected: 00FF)
+✗ B16: =DEC2OCT(C16) -> #ERROR: #NAME? (Unknown function: DEC2OCT) (Expected: 123)
+✗ B17: =DEC2OCT(C17,D17) -> #ERROR: #NAME? (Unknown function: DEC2OCT) (Expected: 00123)
+✗ B18: =HEX2BIN(C18) -> #ERROR: #NAME? (Unknown function: HEX2BIN) (Expected: 11010)
+✗ B19: =HEX2BIN(C19,D19) -> #ERROR: #NAME? (Unknown function: HEX2BIN) (Expected: 00011010)
+✗ B20: =HEX2DEC(C20) -> #ERROR: #NAME? (Unknown function: HEX2DEC) (Expected: 255)
+✗ B21: =HEX2DEC(C21) -> #ERROR: #NAME? (Unknown function: HEX2DEC) (Expected: #NUM!)
+✗ B22: =OCT2BIN(C22) -> #ERROR: #NAME? (Unknown function: OCT2BIN) (Expected: 1111)
+✗ B23: =OCT2BIN(C23,D23) -> #ERROR: #NAME? (Unknown function: OCT2BIN) (Expected: 00001111)
+✗ B24: =OCT2DEC(C24) -> #ERROR: #NAME? (Unknown function: OCT2DEC) (Expected: 63)
+✗ B25: =OCT2DEC(C25) -> #ERROR: #NAME? (Unknown function: OCT2DEC) (Expected: #NUM!)
+----------------------------------------
+Results: 0 passed, 24 failed out of 24 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-bitwise.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =BITAND(C2,D2) -> #ERROR: #NAME? (Unknown function: BITAND) (Expected: #NAME?)
+✗ B3: =BITAND(C3,D3) -> #ERROR: #NAME? (Unknown function: BITAND) (Expected: #NAME?)
+✗ B4: =BITAND(C4,D4) -> #ERROR: #NAME? (Unknown function: BITAND) (Expected: #NAME?)
+✗ B5: =BITOR(C5,D5) -> #ERROR: #NAME? (Unknown function: BITOR) (Expected: #NAME?)
+✗ B6: =BITOR(C6,D6) -> #ERROR: #NAME? (Unknown function: BITOR) (Expected: #NAME?)
+✗ B7: =BITOR(C7,D7) -> #ERROR: #NAME? (Unknown function: BITOR) (Expected: #NAME?)
+✗ B8: =BITXOR(C8,D8) -> #ERROR: #NAME? (Unknown function: BITXOR) (Expected: #NAME?)
+✗ B9: =BITXOR(C9,D9) -> #ERROR: #NAME? (Unknown function: BITXOR) (Expected: #NAME?)
+✗ B10: =BITXOR(C10,D10) -> #ERROR: #NAME? (Unknown function: BITXOR) (Expected: #NAME?)
+✗ B11: =BITLSHIFT(C11,D11) -> #ERROR: #NAME? (Unknown function: BITLSHIFT) (Expected: #NAME?)
+✗ B12: =BITLSHIFT(C12,D12) -> #ERROR: #NAME? (Unknown function: BITLSHIFT) (Expected: #NAME?)
+✗ B13: =BITLSHIFT(C13,D13) -> #ERROR: #NAME? (Unknown function: BITLSHIFT) (Expected: #NAME?)
+✗ B14: =BITRSHIFT(C14,D14) -> #ERROR: #NAME? (Unknown function: BITRSHIFT) (Expected: #NAME?)
+✗ B15: =BITRSHIFT(C15,D15) -> #ERROR: #NAME? (Unknown function: BITRSHIFT) (Expected: #NAME?)
+✗ B16: =BITRSHIFT(C16,D16) -> #ERROR: #NAME? (Unknown function: BITRSHIFT) (Expected: #NAME?)
+✗ B17: =BITNOT(C17) -> #ERROR: #NAME? (Unknown function: BITNOT) (Expected: #NAME?)
+✗ B18: =BITNOT(C18) -> #ERROR: #NAME? (Unknown function: BITNOT) (Expected: #NAME?)
+✗ B19: =BITNOT(C19) -> #ERROR: #NAME? (Unknown function: BITNOT) (Expected: #NAME?)
+----------------------------------------
+Results: 0 passed, 18 failed out of 18 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-combinatorics.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =LOG(C2,D2) -> #ERROR: #NAME? (Unknown function: LOG) (Expected: 3)
+✗ B3: =LOG(C3) -> #ERROR: #NAME? (Unknown function: LOG) (Expected: 2)
+✗ B4: =LOG(C4,D4) -> #ERROR: #NAME? (Unknown function: LOG) (Expected: #NUM!)
+✗ B5: =LOG(C5,D5) -> #ERROR: #NAME? (Unknown function: LOG) (Expected: #DIV/0!)
+✗ B6: =QUOTIENT(C6,D6) -> #ERROR: #NAME? (Unknown function: QUOTIENT) (Expected: 2)
+✗ B7: =QUOTIENT(C7,D7) -> #ERROR: #NAME? (Unknown function: QUOTIENT) (Expected: -2)
+✗ B8: =QUOTIENT(C8,0) -> #ERROR: #NAME? (Unknown function: QUOTIENT) (Expected: #DIV/0!)
+✗ B9: =FACTDOUBLE(C9) -> #ERROR: #NAME? (Unknown function: FACTDOUBLE) (Expected: 105)
+✗ B10: =FACTDOUBLE(C10) -> #ERROR: #NAME? (Unknown function: FACTDOUBLE) (Expected: 384)
+✗ B11: =FACTDOUBLE(C11) -> #ERROR: #NAME? (Unknown function: FACTDOUBLE) (Expected: #NUM!)
+✗ B12: =COMBIN(C12,D12) -> #ERROR: #NAME? (Unknown function: COMBIN) (Expected: 10)
+✗ B13: =COMBIN(C13,D13) -> #ERROR: #NAME? (Unknown function: COMBIN) (Expected: #NUM!)
+✗ B14: =PERMUT(C14,D14) -> #ERROR: #NAME? (Unknown function: PERMUT) (Expected: 20)
+✗ B15: =PERMUT(C15,D15) -> #ERROR: #NAME? (Unknown function: PERMUT) (Expected: #NUM!)
+✗ B16: =MULTINOMIAL(C16,D16,E16) -> #ERROR: #NAME? (Unknown function: MULTINOMIAL) (Expected: 59.99999999999993)
+✗ B17: =MULTINOMIAL(C17,D17) -> #ERROR: #NAME? (Unknown function: MULTINOMIAL) (Expected: #NUM!)
+✗ B18: =SUMSQ(C18,D18) -> #ERROR: #NAME? (Unknown function: SUMSQ) (Expected: 25)
+✗ B19: =SUMSQ(C19,"x") -> #ERROR: #NAME? (Unknown function: SUMSQ) (Expected: #VALUE!)
+----------------------------------------
+Results: 0 passed, 18 failed out of 18 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-inverse-trig-hyperbolic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =ACOSH(C2) -> #ERROR: #NAME? (Unknown function: ACOSH) (Expected: 1.3169578969248166)
+✗ B3: =ACOSH(C3) -> #ERROR: #NAME? (Unknown function: ACOSH) (Expected: #NUM!)
+✗ B4: =ASINH(C4) -> #ERROR: #NAME? (Unknown function: ASINH) (Expected: 0)
+✗ B5: =ASINH("nope") -> #ERROR: #NAME? (Unknown function: ASINH) (Expected: #VALUE!)
+✗ B6: =ATANH(C6) -> #ERROR: #NAME? (Unknown function: ATANH) (Expected: 0.5493061443340549)
+✗ B7: =ATANH(C7) -> #ERROR: #NAME? (Unknown function: ATANH) (Expected: #NUM!)
+✗ B8: =ACOT(C8) -> #ERROR: #NAME? (Unknown function: ACOT) (Expected: #NAME?)
+✗ B9: =ACOT("nope") -> #ERROR: #NAME? (Unknown function: ACOT) (Expected: #NAME?)
+✗ B10: =ACOTH(C10) -> #ERROR: #NAME? (Unknown function: ACOTH) (Expected: #NAME?)
+✗ B11: =ACOTH(C11) -> #ERROR: #NAME? (Unknown function: ACOTH) (Expected: #NAME?)
+✗ B12: =COT(C12) -> #ERROR: #NAME? (Unknown function: COT) (Expected: #NAME?)
+✗ B13: =COT(C13) -> #ERROR: #NAME? (Unknown function: COT) (Expected: #NAME?)
+✗ B14: =COTH(C14) -> #ERROR: #NAME? (Unknown function: COTH) (Expected: #NAME?)
+✗ B15: =COTH(C15) -> #ERROR: #NAME? (Unknown function: COTH) (Expected: #NAME?)
+✗ B16: =CSC(C16) -> #ERROR: #NAME? (Unknown function: CSC) (Expected: #NAME?)
+✗ B17: =CSC(C17) -> #ERROR: #NAME? (Unknown function: CSC) (Expected: #NAME?)
+✗ B18: =CSCH(C18) -> #ERROR: #NAME? (Unknown function: CSCH) (Expected: #NAME?)
+✗ B19: =CSCH(C19) -> #ERROR: #NAME? (Unknown function: CSCH) (Expected: #NAME?)
+✗ B20: =SEC(C20) -> #ERROR: #NAME? (Unknown function: SEC) (Expected: #NAME?)
+✗ B21: =SEC(C21) -> #ERROR: #NAME? (Unknown function: SEC) (Expected: #NAME?)
+✗ B22: =SECH(C22) -> #ERROR: #NAME? (Unknown function: SECH) (Expected: #NAME?)
+✗ B23: =SECH("nope") -> #ERROR: #NAME? (Unknown function: SECH) (Expected: #NAME?)
+----------------------------------------
+Results: 0 passed, 22 failed out of 22 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-math-core.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =ABS(C2) -> 5.0 (Expected: 5)
+✓ B3: =ABS(0) -> 0.0 (Expected: 0)
+✓ B4: =SQRT(C4) -> 3.0 (Expected: 3)
+✓ B5: =SQRT(C5) -> #NUM! (Expected: #NUM!)
+✓ B6: =POWER(C6,D6) -> 8.0 (Expected: 8)
+✓ B7: =POWER(C7,D7) -> 1.0 (Expected: 1)
+✓ B8: =EXP(0) -> 1.0 (Expected: 1)
+✓ B9: =EXP("a") -> #VALUE! (Expected: #VALUE!)
+✓ B10: =LN(1) -> 0.0 (Expected: 0)
+✓ B11: =LN(0) -> #NUM! (Expected: #NUM!)
+✓ B12: =LOG10(100) -> 2.0 (Expected: 2)
+✓ B13: =LOG10(-10) -> #NUM! (Expected: #NUM!)
+✓ B14: =SIN(0) -> 0.0 (Expected: 0)
+✓ B15: =SIN("a") -> #VALUE! (Expected: #VALUE!)
+✓ B16: =COS(0) -> 1.0 (Expected: 1)
+✓ B17: =COS("a") -> #VALUE! (Expected: #VALUE!)
+✓ B18: =TAN(0) -> 0.0 (Expected: 0)
+✓ B19: =TAN("a") -> #VALUE! (Expected: #VALUE!)
+✓ B20: =PI() -> 3.141592653589793 (Expected: 3.141592653589793)
+----------------------------------------
+Results: 19 passed, 0 failed out of 19 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-rounding.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =ROUND(C2,2) -> #ERROR: #NAME? (Unknown function: ROUND) (Expected: 1.23)
+✗ B3: =ROUND("nope",2) -> #ERROR: #NAME? (Unknown function: ROUND) (Expected: #VALUE!)
+✗ B4: =ROUNDUP(C4,2) -> #ERROR: #NAME? (Unknown function: ROUNDUP) (Expected: 1.24)
+✗ B5: =ROUNDUP(C5,2) -> #ERROR: #NAME? (Unknown function: ROUNDUP) (Expected: -1.24)
+✗ B6: =ROUNDDOWN(C6,2) -> #ERROR: #NAME? (Unknown function: ROUNDDOWN) (Expected: 1.23)
+✗ B7: =ROUNDDOWN(C7,2) -> #ERROR: #NAME? (Unknown function: ROUNDDOWN) (Expected: -1.23)
+✗ B8: =INT(C8) -> #ERROR: #NAME? (Unknown function: INT) (Expected: 3)
+✗ B9: =INT(C9) -> #ERROR: #NAME? (Unknown function: INT) (Expected: -4)
+✗ B10: =TRUNC(C10) -> #ERROR: #NAME? (Unknown function: TRUNC) (Expected: 3)
+✗ B11: =TRUNC(C11) -> #ERROR: #NAME? (Unknown function: TRUNC) (Expected: -3)
+✗ B12: =MOD(C12,D12) -> #ERROR: #NAME? (Unknown function: MOD) (Expected: 1)
+✗ B13: =MOD(C13,0) -> #ERROR: #NAME? (Unknown function: MOD) (Expected: #DIV/0!)
+✗ B14: =SIGN(C14) -> #ERROR: #NAME? (Unknown function: SIGN) (Expected: -1)
+✗ B15: =SIGN(0) -> #ERROR: #NAME? (Unknown function: SIGN) (Expected: 0)
+✗ B16: =CEILING(C16,D16) -> #ERROR: #NAME? (Unknown function: CEILING) (Expected: 5)
+✗ B17: =CEILING(4.3,0) -> #ERROR: #NAME? (Unknown function: CEILING) (Expected: 0)
+✗ B18: =FLOOR(C18,D18) -> #ERROR: #NAME? (Unknown function: FLOOR) (Expected: 4)
+✗ B19: =FLOOR(4.7,0) -> #ERROR: #NAME? (Unknown function: FLOOR) (Expected: #DIV/0!)
+✗ B20: =EVEN(C20) -> #ERROR: #NAME? (Unknown function: EVEN) (Expected: 4)
+✗ B21: =EVEN(C21) -> #ERROR: #NAME? (Unknown function: EVEN) (Expected: -4)
+✗ B22: =ODD(C22) -> #ERROR: #NAME? (Unknown function: ODD) (Expected: 5)
+✗ B23: =ODD(C23) -> #ERROR: #NAME? (Unknown function: ODD) (Expected: -5)
+----------------------------------------
+Results: 0 passed, 22 failed out of 22 spec formulas.
+
+[SPEC] formulas/arithmetic/odf-trig-and-integer.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =ACOS(C2) -> #ERROR: #NAME? (Unknown function: ACOS) (Expected: 0)
+✗ B3: =ACOS(C3) -> #ERROR: #NAME? (Unknown function: ACOS) (Expected: #NUM!)
+✗ B4: =ASIN(C4) -> #ERROR: #NAME? (Unknown function: ASIN) (Expected: 0)
+✗ B5: =ASIN(C5) -> #ERROR: #NAME? (Unknown function: ASIN) (Expected: #NUM!)
+✗ B6: =ATAN(C6) -> #ERROR: #NAME? (Unknown function: ATAN) (Expected: 0.7853981633974483)
+✗ B7: =ATAN("nope") -> #ERROR: #NAME? (Unknown function: ATAN) (Expected: #VALUE!)
+✗ B8: =ATAN2(C8,D8) -> #ERROR: #NAME? (Unknown function: ATAN2) (Expected: 0.7853981633974483)
+✗ B9: =ATAN2(1,"nope") -> #ERROR: #NAME? (Unknown function: ATAN2) (Expected: #VALUE!)
+✗ B10: =COSH(C10) -> #ERROR: #NAME? (Unknown function: COSH) (Expected: 1)
+✗ B11: =COSH("nope") -> #ERROR: #NAME? (Unknown function: COSH) (Expected: #VALUE!)
+✗ B12: =SINH(C12) -> #ERROR: #NAME? (Unknown function: SINH) (Expected: 0)
+✗ B13: =SINH("nope") -> #ERROR: #NAME? (Unknown function: SINH) (Expected: #VALUE!)
+✗ B14: =TANH(C14) -> #ERROR: #NAME? (Unknown function: TANH) (Expected: 0)
+✗ B15: =TANH("nope") -> #ERROR: #NAME? (Unknown function: TANH) (Expected: #VALUE!)
+✗ B16: =DEGREES(PI()/2) -> #ERROR: #NAME? (Unknown function: DEGREES) (Expected: 90)
+✗ B17: =DEGREES("nope") -> #ERROR: #NAME? (Unknown function: DEGREES) (Expected: #VALUE!)
+✗ B18: =RADIANS(180) -> #ERROR: #NAME? (Unknown function: RADIANS) (Expected: 3.141592653589793)
+✗ B19: =RADIANS("nope") -> #ERROR: #NAME? (Unknown function: RADIANS) (Expected: #VALUE!)
+✗ B20: =FACT(C20) -> #ERROR: #NAME? (Unknown function: FACT) (Expected: 120)
+✗ B21: =FACT(C21) -> #ERROR: #NAME? (Unknown function: FACT) (Expected: #NUM!)
+✗ B22: =GCD(C22,D22) -> #ERROR: #NAME? (Unknown function: GCD) (Expected: 12)
+✗ B23: =GCD(C23,D23) -> #ERROR: #NAME? (Unknown function: GCD) (Expected: 5)
+✗ B24: =LCM(C24,D24) -> #ERROR: #NAME? (Unknown function: LCM) (Expected: 24)
+✗ B25: =LCM(C25,D25) -> #ERROR: #NAME? (Unknown function: LCM) (Expected: 0)
+----------------------------------------
+Results: 0 passed, 24 failed out of 24 spec formulas.
+
+[SPEC] formulas/arithmetic/operator-precedence.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =2+3*4 -> 14.0 (Expected: 14)
+✓ B3: =(2+3)*4 -> 20.0 (Expected: 20)
+----------------------------------------
+Results: 2 passed, 0 failed out of 2 spec formulas.
+
+[SPEC] formulas/arithmetic/rounding-extended.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =CEILING.MATH(C2) -> #ERROR: #NAME? (Unknown function: CEILING.MATH) (Expected: 5)
+✗ B3: =CEILING.MATH(C3,D3) -> #ERROR: #NAME? (Unknown function: CEILING.MATH) (Expected: 4.5)
+✗ B4: =FLOOR.MATH(C4) -> #ERROR: #NAME? (Unknown function: FLOOR.MATH) (Expected: 4)
+✗ B5: =FLOOR.MATH(C5,D5) -> #ERROR: #NAME? (Unknown function: FLOOR.MATH) (Expected: 4)
+✗ B6: =CEILING.PRECISE(C6,D6) -> #ERROR: #NAME? (Unknown function: CEILING.PRECISE) (Expected: 4.5)
+✗ B7: =FLOOR.PRECISE(C7,D7) -> #ERROR: #NAME? (Unknown function: FLOOR.PRECISE) (Expected: 4)
+✗ B8: =MROUND(C8,D8) -> #ERROR: #NAME? (Unknown function: MROUND) (Expected: 9)
+✗ B9: =MROUND(C9,D9) -> #ERROR: #NAME? (Unknown function: MROUND) (Expected: 12)
+✗ B10: =MROUND(C10,D10) -> #ERROR: #NAME? (Unknown function: MROUND) (Expected: #NUM!)
+✗ B11: =CEILING.MATH(C11,D11) -> #ERROR: #NAME? (Unknown function: CEILING.MATH) (Expected: 6)
+✗ B12: =FLOOR.MATH(C12,D12) -> #ERROR: #NAME? (Unknown function: FLOOR.MATH) (Expected: 4)
+✗ B13: =CEILING.PRECISE(C13) -> #ERROR: #NAME? (Unknown function: CEILING.PRECISE) (Expected: 5)
+✗ B14: =FLOOR.PRECISE(C14) -> #ERROR: #NAME? (Unknown function: FLOOR.PRECISE) (Expected: 4)
+----------------------------------------
+Results: 0 passed, 13 failed out of 13 spec formulas.
+
+[SPEC] formulas/arithmetic/type-coercion.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =A3+B3 -> 7.0 (Expected: 7)
+✓ B4: =A5+B5 -> 2.0 (Expected: 2)
+----------------------------------------
+Results: 2 passed, 0 failed out of 2 spec formulas.
+
+[SPEC] formulas/date-time/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =DATE(2024,1,1) -> #ERROR: #NAME? (Unknown function: DATE) (Expected: 45292)
+✗ B3: =DAY(B2) -> #ERROR: #NAME? (Unknown function: DAY) (Expected: 1)
+✗ B4: =MONTH(B2) -> #ERROR: #NAME? (Unknown function: MONTH) (Expected: 1)
+----------------------------------------
+Results: 0 passed, 3 failed out of 3 spec formulas.
+
+[SPEC] formulas/date-time/odf-calendar.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =DATEVALUE(C2) -> #ERROR: #NAME? (Unknown function: DATEVALUE) (Expected: 45351)
+✗ B3: =DATEVALUE("nope") -> #ERROR: #NAME? (Unknown function: DATEVALUE) (Expected: #VALUE!)
+✗ B4: =TIMEVALUE(C4) -> #ERROR: #NAME? (Unknown function: TIMEVALUE) (Expected: 0.5208333333333334)
+✗ B5: =TIMEVALUE("nope") -> #ERROR: #NAME? (Unknown function: TIMEVALUE) (Expected: #VALUE!)
+✗ B6: =WEEKDAY(C6) -> #ERROR: #NAME? (Unknown function: WEEKDAY) (Expected: 5)
+✗ B7: =WEEKDAY(C7,2) -> #ERROR: #NAME? (Unknown function: WEEKDAY) (Expected: 4)
+✗ B8: =WEEKDAY("nope") -> #ERROR: #NAME? (Unknown function: WEEKDAY) (Expected: #VALUE!)
+✗ B9: =WEEKNUM(C9,2) -> #ERROR: #NAME? (Unknown function: WEEKNUM) (Expected: 1)
+✗ B10: =WEEKNUM("nope",2) -> #ERROR: #NAME? (Unknown function: WEEKNUM) (Expected: #VALUE!)
+✗ B11: =EDATE(C11,D11) -> #ERROR: #NAME? (Unknown function: EDATE) (Expected: 45351)
+✗ B12: =EDATE("nope",1) -> #ERROR: #NAME? (Unknown function: EDATE) (Expected: #VALUE!)
+✗ B13: =EOMONTH(C13,0) -> #ERROR: #NAME? (Unknown function: EOMONTH) (Expected: 45322)
+✗ B14: =EOMONTH("nope",0) -> #ERROR: #NAME? (Unknown function: EOMONTH) (Expected: #VALUE!)
+✗ B15: =DAYS(C15,D15) -> #ERROR: #NAME? (Unknown function: DAYS) (Expected: #NAME?)
+✗ B16: =DAYS("nope",D16) -> #ERROR: #NAME? (Unknown function: DAYS) (Expected: #NAME?)
+✗ B17: =DATEDIF(C17,D17,"d") -> #ERROR: #NAME? (Unknown function: DATEDIF) (Expected: 28)
+✗ B18: =DATEDIF(C18,D18,"d") -> #ERROR: #NAME? (Unknown function: DATEDIF) (Expected: #NUM!)
+----------------------------------------
+Results: 0 passed, 17 failed out of 17 spec formulas.
+
+[SPEC] formulas/date-time/odf-extract.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =YEAR(C2) -> #ERROR: #NAME? (Unknown function: YEAR) (Expected: 2024)
+✗ B3: =YEAR("nope") -> #ERROR: #NAME? (Unknown function: YEAR) (Expected: #VALUE!)
+✗ B4: =HOUR(C4) -> #ERROR: #NAME? (Unknown function: HOUR) (Expected: 15)
+✗ B5: =HOUR("nope") -> #ERROR: #NAME? (Unknown function: HOUR) (Expected: #VALUE!)
+✗ B6: =MINUTE(C6) -> #ERROR: #NAME? (Unknown function: MINUTE) (Expected: 30)
+✗ B7: =MINUTE("nope") -> #ERROR: #NAME? (Unknown function: MINUTE) (Expected: #VALUE!)
+✗ B8: =SECOND(C8) -> #ERROR: #NAME? (Unknown function: SECOND) (Expected: 15)
+✗ B9: =SECOND("nope") -> #ERROR: #NAME? (Unknown function: SECOND) (Expected: #VALUE!)
+✗ B10: =TIME(6,30,0) -> #ERROR: #NAME? (Unknown function: TIME) (Expected: 0.2708333333333333)
+✗ B11: =TIME("x",0,0) -> #ERROR: #NAME? (Unknown function: TIME) (Expected: #VALUE!)
+✗ B12: =DATEVALUE("7/4/2024") -> #ERROR: #NAME? (Unknown function: DATEVALUE) (Expected: 45389)
+✗ B13: =DATEVALUE("not-a-date") -> #ERROR: #NAME? (Unknown function: DATEVALUE) (Expected: #VALUE!)
+✗ B14: =TIMEVALUE("18:30") -> #ERROR: #NAME? (Unknown function: TIMEVALUE) (Expected: 0.7708333333333334)
+✗ B15: =TIMEVALUE("bad") -> #ERROR: #NAME? (Unknown function: TIMEVALUE) (Expected: #VALUE!)
+✗ B16: =WEEKDAY(C16) -> #ERROR: #NAME? (Unknown function: WEEKDAY) (Expected: 5)
+✗ B17: =WEEKDAY("nope") -> #ERROR: #NAME? (Unknown function: WEEKDAY) (Expected: #VALUE!)
+----------------------------------------
+Results: 0 passed, 16 failed out of 16 spec formulas.
+
+[SPEC] formulas/financial/odf-core.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =PV(C2,D2,E2,F2,G2) -> #ERROR: #NAME? (Unknown function: PV) (Expected: -500)
+✗ B3: =PV(C3,D3,E3,F3,G3) -> #ERROR: #NAME? (Unknown function: PV) (Expected: -250)
+✗ B4: =FV(C4,D4,E4,F4,G4) -> #ERROR: #NAME? (Unknown function: FV) (Expected: 121.00000000000001)
+✗ B5: =FV(C5,D5,E5,F5,G5) -> #ERROR: #NAME? (Unknown function: FV) (Expected: -400)
+✗ B6: =PMT(C6,D6,E6,F6,G6) -> #ERROR: #NAME? (Unknown function: PMT) (Expected: -100)
+✗ B7: =PMT(C7,D7,E7,F7,G7) -> #ERROR: #NAME? (Unknown function: PMT) (Expected: -104.99999999999999)
+✗ B8: =NPER(C8,D8,E8,F8,G8) -> #ERROR: #NAME? (Unknown function: NPER) (Expected: 5)
+✗ B9: =NPER(C9,D9,E9,F9,G9) -> #ERROR: #NAME? (Unknown function: NPER) (Expected: 4)
+✗ B10: =RATE(D10,E10,F10,G10,H10,I10) -> #ERROR: #NAME? (Unknown function: RATE) (Expected: 0)
+✗ B11: =RATE(D11,E11,F11,G11,H11,I11) -> #ERROR: #NAME? (Unknown function: RATE) (Expected: 0)
+✗ B12: =NPV(C12,D12:F12) -> #ERROR: #NAME? (Unknown function: NPV) (Expected: 248.68519909842223)
+✗ B13: =NPV(C13,D13:F13) -> #ERROR: #NAME? (Unknown function: NPV) (Expected: 75)
+✗ B14: =IRR(C14:E14) -> #ERROR: #NAME? (Unknown function: IRR) (Expected: -2.886801908630332e-12)
+✗ B15: =IRR(C15:E15) -> #ERROR: #NAME? (Unknown function: IRR) (Expected: #NUM!)
+----------------------------------------
+Results: 0 passed, 14 failed out of 14 spec formulas.
+
+[SPEC] formulas/logical/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =AND(C2,D2) -> #ERROR: #NAME? (Unknown function: AND) (Expected: True)
+✗ B3: =OR(C3,D3) -> #ERROR: #NAME? (Unknown function: OR) (Expected: True)
+✗ B4: =NOT(C4) -> #ERROR: #NAME? (Unknown function: NOT) (Expected: True)
+----------------------------------------
+Results: 0 passed, 3 failed out of 3 spec formulas.
+
+[SPEC] formulas/logical/ifs-switch-xor.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =IFS(C2>10,"big",C2>5,"mid",TRUE,"small") -> #ERROR: #NAME? (Unknown function: IFS) (Expected: mid)
+✗ B3: =IFS(C3>10,"big",C3>5,"mid") -> #ERROR: #NAME? (Unknown function: IFS) (Expected: #N/A)
+✗ B4: =IFS(C4>10,"big",C4>5,"mid",TRUE,"small") -> #ERROR: #NAME? (Unknown function: IFS) (Expected: big)
+✗ B6: =SWITCH(C6,1,"one",2,"two","other") -> #ERROR: #NAME? (Unknown function: SWITCH) (Expected: two)
+✗ B7: =SWITCH(C7,"red","stop","green","go","other") -> #ERROR: #NAME? (Unknown function: SWITCH) (Expected: other)
+✗ B8: =SWITCH(C8,"red","stop","green","go") -> #ERROR: #NAME? (Unknown function: SWITCH) (Expected: #N/A)
+✗ B10: =XOR(C10,D10,E10) -> #ERROR: #NAME? (Unknown function: XOR) (Expected: True)
+✗ B11: =XOR(C11,D11,E11) -> #ERROR: #NAME? (Unknown function: XOR) (Expected: False)
+✗ B12: =XOR(C12,D12) -> #ERROR: #NAME? (Unknown function: XOR) (Expected: False)
+----------------------------------------
+Results: 0 passed, 9 failed out of 9 spec formulas.
+
+[SPEC] formulas/logical/odf-info-extended.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =N(C2) -> #ERROR: #NAME? (Unknown function: N) (Expected: 5)
+✗ B3: =N(C3) -> #ERROR: #NAME? (Unknown function: N) (Expected: 0)
+✗ B4: =N(C4) -> #ERROR: #NAME? (Unknown function: N) (Expected: 1)
+✗ B5: =N(C5) -> #ERROR: #NAME? (Unknown function: N) (Expected: #DIV/0!)
+✗ B6: =NA() -> #ERROR: #NAME? (Unknown function: NA) (Expected: #N/A)
+✗ B7: =TYPE(C7) -> #ERROR: #NAME? (Unknown function: TYPE) (Expected: 1)
+✗ B8: =TYPE(C8) -> #ERROR: #NAME? (Unknown function: TYPE) (Expected: 16)
+✗ B9: =ISNONTEXT(C9) -> #ERROR: #NAME? (Unknown function: ISNONTEXT) (Expected: True)
+✗ B10: =ISNONTEXT(C10) -> #ERROR: #NAME? (Unknown function: ISNONTEXT) (Expected: False)
+✗ B11: =ISREF(C11) -> #ERROR: #NAME? (Unknown function: ISREF) (Expected: True)
+✗ B12: =ISREF(C12) -> #ERROR: #NAME? (Unknown function: ISREF) (Expected: True)
+✗ B13: =ISEVEN(C13) -> #ERROR: #NAME? (Unknown function: ISEVEN) (Expected: True)
+✗ B14: =ISEVEN(C14) -> #ERROR: #NAME? (Unknown function: ISEVEN) (Expected: #VALUE!)
+✗ B15: =ISODD(C15) -> #ERROR: #NAME? (Unknown function: ISODD) (Expected: True)
+✗ B16: =ISODD(C16) -> #ERROR: #NAME? (Unknown function: ISODD) (Expected: #VALUE!)
+✗ B17: =IFERROR(C17,"fallback") -> #ERROR: #NAME? (Unknown function: IFERROR) (Expected: 9)
+✗ B18: =IFERROR(C18,"fallback") -> #ERROR: #NAME? (Unknown function: IFERROR) (Expected: fallback)
+✗ B19: =IFNA(C19,"na") -> #ERROR: #NAME? (Unknown function: IFNA) (Expected: #NAME?)
+✗ B20: =IFNA(C20,"na") -> #ERROR: #NAME? (Unknown function: IFNA) (Expected: #NAME?)
+✓ C5: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✓ C8: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✓ C18: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✗ C19: =NA() -> #ERROR: #NAME? (Unknown function: NA) (Expected: #N/A)
+✓ C20: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+----------------------------------------
+Results: 4 passed, 20 failed out of 24 spec formulas.
+
+[SPEC] formulas/logical/odf-info.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =IF(C2,"yes","no") -> #ERROR: #NAME? (Unknown function: IF) (Expected: yes)
+✗ B3: =IF(C3,1/0,"safe") -> #ERROR: #NAME? (Unknown function: IF) (Expected: safe)
+✗ B4: =TRUE() -> #ERROR: #NAME? (Unknown function: TRUE) (Expected: True)
+✗ B6: =FALSE() -> #ERROR: #NAME? (Unknown function: FALSE) (Expected: False)
+✗ B8: =ISBLANK(C8) -> #ERROR: #NAME? (Unknown function: ISBLANK) (Expected: True)
+✗ B9: =ISBLANK(C9) -> #ERROR: #NAME? (Unknown function: ISBLANK) (Expected: False)
+✗ B10: =ISNUMBER(C10) -> #ERROR: #NAME? (Unknown function: ISNUMBER) (Expected: True)
+✗ B11: =ISNUMBER(C11) -> #ERROR: #NAME? (Unknown function: ISNUMBER) (Expected: False)
+✗ B12: =ISTEXT(C12) -> #ERROR: #NAME? (Unknown function: ISTEXT) (Expected: True)
+✗ B13: =ISTEXT(C13) -> #ERROR: #NAME? (Unknown function: ISTEXT) (Expected: False)
+✗ B14: =ISLOGICAL(C14) -> #ERROR: #NAME? (Unknown function: ISLOGICAL) (Expected: True)
+✗ B15: =ISLOGICAL(C15) -> #ERROR: #NAME? (Unknown function: ISLOGICAL) (Expected: False)
+✗ B16: =ISERROR(C16) -> #ERROR: #NAME? (Unknown function: ISERROR) (Expected: True)
+✗ B17: =ISERROR(C17) -> #ERROR: #NAME? (Unknown function: ISERROR) (Expected: False)
+✗ B18: =ISERR(C18) -> #ERROR: #NAME? (Unknown function: ISERR) (Expected: True)
+✗ B19: =ISERR(C19) -> #ERROR: #NAME? (Unknown function: ISERR) (Expected: False)
+✗ B20: =ISNA(C20) -> #ERROR: #NAME? (Unknown function: ISNA) (Expected: False)
+✗ B21: =ISNA(C21) -> #ERROR: #NAME? (Unknown function: ISNA) (Expected: False)
+✓ C16: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✓ C18: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✓ C21: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+----------------------------------------
+Results: 3 passed, 18 failed out of 21 spec formulas.
+
+[SPEC] formulas/lookup/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =VLOOKUP("B",D2:E3,2,FALSE) -> #ERROR: #NAME? (Unknown function: VLOOKUP) (Expected: 20)
+✓ B3: =INDEX(E2:E3,1) -> 10 (Expected: 10)
+✗ B4: =MATCH("B",D2:D3,0) -> #ERROR: #NAME? (Unknown function: MATCH) (Expected: 2)
+----------------------------------------
+Results: 1 passed, 2 failed out of 3 spec formulas.
+
+[SPEC] formulas/lookup/odf-reference.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =HLOOKUP("B",C2:E3,2,FALSE) -> #ERROR: #NAME? (Unknown function: HLOOKUP) (Expected: 20)
+✗ B3: =HLOOKUP("B",C2:E3,5,FALSE) -> #ERROR: #NAME? (Unknown function: HLOOKUP) (Expected: #REF!)
+✗ B4: =LOOKUP(2,C4:C6,D4:D6) -> #ERROR: #NAME? (Unknown function: LOOKUP) (Expected: mid)
+✗ B5: =LOOKUP(0.5,C4:C6,D4:D6) -> #ERROR: #NAME? (Unknown function: LOOKUP) (Expected: #N/A)
+✗ B7: =CHOOSE(2,"red","blue","green") -> #ERROR: #NAME? (Unknown function: CHOOSE) (Expected: blue)
+✗ B8: =CHOOSE(0,"red","blue") -> #ERROR: #NAME? (Unknown function: CHOOSE) (Expected: #VALUE!)
+✗ B9: =ADDRESS(4,2) -> #ERROR: #NAME? (Unknown function: ADDRESS) (Expected: $B$4)
+✗ B10: =ADDRESS(0,2) -> #ERROR: #NAME? (Unknown function: ADDRESS) (Expected: #VALUE!)
+✗ B11: =ROW(C11) -> #ERROR: #NAME? (Unknown function: ROW) (Expected: 11)
+✗ B12: =ROW() -> #ERROR: #NAME? (Unknown function: ROW) (Expected: 12)
+✗ B13: =COLUMN(D13) -> #ERROR: #NAME? (Unknown function: COLUMN) (Expected: 4)
+✗ B14: =COLUMN() -> #ERROR: #NAME? (Unknown function: COLUMN) (Expected: 2)
+✗ B15: =ROWS(C15:E17) -> #ERROR: #NAME? (Unknown function: ROWS) (Expected: 3)
+✗ B16: =ROWS(C16:C16) -> #ERROR: #NAME? (Unknown function: ROWS) (Expected: 1)
+✗ B17: =COLUMNS(C17:E17) -> #ERROR: #NAME? (Unknown function: COLUMNS) (Expected: 3)
+✗ B18: =COLUMNS(D18:D18) -> #ERROR: #NAME? (Unknown function: COLUMNS) (Expected: 1)
+✗ B19: =OFFSET(C19,1,2) -> #ERROR: #NAME? (Unknown function: OFFSET) (Expected: 555)
+✗ B20: =OFFSET(C19,0,0,0,1) -> #ERROR: #NAME? (Unknown function: OFFSET) (Expected: #REF!)
+✗ B21: =INDIRECT("C21") -> #ERROR: #NAME? (Unknown function: INDIRECT) (Expected: 42)
+✗ B22: =INDIRECT("Z0") -> #ERROR: #NAME? (Unknown function: INDIRECT) (Expected: #REF!)
+----------------------------------------
+Results: 0 passed, 20 failed out of 20 spec formulas.
+
+[SPEC] formulas/statistical/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =AVERAGE(C2:D2) -> 1.5 (Expected: 1.5)
+✗ B3: =MAX(C3:D3) -> #ERROR: #NAME? (Unknown function: MAX) (Expected: 9)
+✗ B4: =MIN(C4:D4) -> #ERROR: #NAME? (Unknown function: MIN) (Expected: 3)
+----------------------------------------
+Results: 1 passed, 2 failed out of 3 spec formulas.
+
+[SPEC] formulas/statistical/odf-aggregate.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =SUM(C2:E2) -> 6.0 (Expected: 6)
+✓ B3: =SUM(C3:E3) -> 4.0 (Expected: 4)
+✗ B4: =PRODUCT(C4:E4) -> #ERROR: #NAME? (Unknown function: PRODUCT) (Expected: 24)
+✗ B5: =PRODUCT(C5:E5) -> #ERROR: #NAME? (Unknown function: PRODUCT) (Expected: 0)
+✗ B6: =COUNT(C6:F6) -> #ERROR: #NAME? (Unknown function: COUNT) (Expected: 4)
+✗ B7: =COUNT(C7:F7) -> #ERROR: #NAME? (Unknown function: COUNT) (Expected: 1)
+✗ B8: =COUNTA(C8:E8) -> #ERROR: #NAME? (Unknown function: COUNTA) (Expected: 3)
+✗ B9: =COUNTA(C9:E9) -> #ERROR: #NAME? (Unknown function: COUNTA) (Expected: 2)
+✗ B10: =COUNTBLANK(C10:E10) -> #ERROR: #NAME? (Unknown function: COUNTBLANK) (Expected: 2)
+✗ B11: =COUNTBLANK(C11:D11) -> #ERROR: #NAME? (Unknown function: COUNTBLANK) (Expected: 0)
+✗ B12: =COUNTIF(C12:C15,2) -> #ERROR: #NAME? (Unknown function: COUNTIF) (Expected: 2)
+✗ B13: =COUNTIF(C12:C15,5) -> #ERROR: #NAME? (Unknown function: COUNTIF) (Expected: 0)
+✗ B14: =SUMIF(C16:C19,">2") -> #ERROR: #NAME? (Unknown function: SUMIF) (Expected: 7)
+✗ B15: =SUMIF(C16:C19,">10") -> #ERROR: #NAME? (Unknown function: SUMIF) (Expected: 0)
+✗ B16: =AVERAGEIF(C20:C23,">=4") -> #ERROR: #NAME? (Unknown function: AVERAGEIF) (Expected: 6)
+✗ B17: =AVERAGEIF(C20:C23,">10") -> #ERROR: #NAME? (Unknown function: AVERAGEIF) (Expected: #DIV/0!)
+✗ B18: =MEDIAN(C24:G24) -> #ERROR: #NAME? (Unknown function: MEDIAN) (Expected: 3)
+✗ B19: =MEDIAN(C25:F25) -> #ERROR: #NAME? (Unknown function: MEDIAN) (Expected: 3)
+✗ B20: =MODE(C26:G26) -> #ERROR: #NAME? (Unknown function: MODE) (Expected: 2)
+✗ B21: =MODE(C27:E27) -> #ERROR: #NAME? (Unknown function: MODE) (Expected: #N/A)
+----------------------------------------
+Results: 2 passed, 18 failed out of 20 spec formulas.
+
+[SPEC] formulas/statistical/odf-conditional-aggregates.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =COUNTIFS(D2:D6,"A",E2:E6,1) -> #ERROR: #NAME? (Unknown function: COUNTIFS) (Expected: 3)
+✗ B3: =COUNTIFS(D2:D6,"C") -> #ERROR: #NAME? (Unknown function: COUNTIFS) (Expected: 0)
+✗ B4: =SUMIFS(C2:C6,D2:D6,"B") -> #ERROR: #NAME? (Unknown function: SUMIFS) (Expected: 6)
+✗ B5: =SUMIFS(C2:C6,D2:D6,"C") -> #ERROR: #NAME? (Unknown function: SUMIFS) (Expected: 0)
+✗ B6: =AVERAGEIFS(C2:C6,D2:D6,"A",E2:E6,1) -> #ERROR: #NAME? (Unknown function: AVERAGEIFS) (Expected: 3)
+✗ B7: =AVERAGEIFS(C2:C6,D2:D6,"C") -> #ERROR: #NAME? (Unknown function: AVERAGEIFS) (Expected: #DIV/0!)
+✗ B8: =MINIFS(C2:C6,D2:D6,"B") -> #ERROR: #NAME? (Unknown function: MINIFS) (Expected: #NAME?)
+✗ B9: =MINIFS(C2:C6,D2:D5,"A") -> #ERROR: #NAME? (Unknown function: MINIFS) (Expected: #NAME?)
+✗ B10: =MAXIFS(C2:C6,D2:D6,"A") -> #ERROR: #NAME? (Unknown function: MAXIFS) (Expected: #NAME?)
+✗ B11: =MAXIFS(C2:C6,D2:D5,"A") -> #ERROR: #NAME? (Unknown function: MAXIFS) (Expected: #NAME?)
+----------------------------------------
+Results: 0 passed, 10 failed out of 10 spec formulas.
+
+[SPEC] formulas/statistical/odf-dispersion.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =AVERAGEA(C2:E2) -> #ERROR: #NAME? (Unknown function: AVERAGEA) (Expected: 1)
+✗ B3: =AVERAGEA(C3:E3) -> #ERROR: #NAME? (Unknown function: AVERAGEA) (Expected: #DIV/0!)
+✗ B4: =MAXA(C4:E4) -> #ERROR: #NAME? (Unknown function: MAXA) (Expected: 2)
+✗ B5: =MAXA(C5:D5) -> #ERROR: #NAME? (Unknown function: MAXA) (Expected: #DIV/0!)
+✗ B6: =MINA(C6:E6) -> #ERROR: #NAME? (Unknown function: MINA) (Expected: 0)
+✗ B7: =MINA(C7:D7) -> #ERROR: #NAME? (Unknown function: MINA) (Expected: #DIV/0!)
+✗ B8: =STDEV(C8:E8) -> #ERROR: #NAME? (Unknown function: STDEV) (Expected: 1)
+✗ B9: =STDEV(C9) -> #ERROR: #NAME? (Unknown function: STDEV) (Expected: #DIV/0!)
+✗ B10: =STDEVP(C10:E10) -> #ERROR: #NAME? (Unknown function: STDEVP) (Expected: 0.816496580927726)
+✗ B11: =STDEVP(C11) -> #ERROR: #NAME? (Unknown function: STDEVP) (Expected: 0)
+✗ B12: =VAR(C12:E12) -> #ERROR: #NAME? (Unknown function: VAR) (Expected: 1)
+✗ B13: =VAR(C13) -> #ERROR: #NAME? (Unknown function: VAR) (Expected: #DIV/0!)
+✗ B14: =VARP(C14:E14) -> #ERROR: #NAME? (Unknown function: VARP) (Expected: 0.6666666666666666)
+✗ B15: =VARP(C15) -> #ERROR: #NAME? (Unknown function: VARP) (Expected: 0)
+✗ B16: =RANK(C16,C16:C18) -> #ERROR: #NAME? (Unknown function: RANK) (Expected: 2)
+✗ B17: =RANK("x",C16:C18) -> #ERROR: #NAME? (Unknown function: RANK) (Expected: #VALUE!)
+✗ B18: =LARGE(C19:C22,2) -> #ERROR: #NAME? (Unknown function: LARGE) (Expected: 7)
+✗ B19: =LARGE(C19:C22,5) -> #ERROR: #NAME? (Unknown function: LARGE) (Expected: #NUM!)
+✗ B20: =SMALL(C23:C26,2) -> #ERROR: #NAME? (Unknown function: SMALL) (Expected: 4)
+✗ B21: =SMALL(C23:C26,0) -> #ERROR: #NAME? (Unknown function: SMALL) (Expected: #NUM!)
+✗ B22: =PERCENTILE(C27:C30,0.5) -> #ERROR: #NAME? (Unknown function: PERCENTILE) (Expected: 2.5)
+✗ B23: =PERCENTILE(C27:C30,1.5) -> #ERROR: #NAME? (Unknown function: PERCENTILE) (Expected: #NUM!)
+✓ C5: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+✓ C7: =1/0 -> #DIV/0! (Expected: #DIV/0!)
+----------------------------------------
+Results: 2 passed, 22 failed out of 24 spec formulas.
+
+[SPEC] formulas/text/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =CONCAT(C2,D2) -> #ERROR: #NAME? (Unknown function: CONCAT) (Expected: #NAME?)
+✗ B3: =LEFT(C3,3) -> #ERROR: #NAME? (Unknown function: LEFT) (Expected: Cel)
+✗ B4: =LEN(C4) -> #ERROR: #NAME? (Unknown function: LEN) (Expected: 4)
+----------------------------------------
+Results: 0 passed, 3 failed out of 3 spec formulas.
+
+[SPEC] formulas/text/odf-additional.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =CHAR(C2) -> #ERROR: #NAME? (Unknown function: CHAR) (Expected: A)
+✗ B3: =CHAR(C3) -> #ERROR: #NAME? (Unknown function: CHAR) (Expected: #VALUE!)
+✗ B4: =CODE(C4) -> #ERROR: #NAME? (Unknown function: CODE) (Expected: 65)
+✗ B5: =CODE(C5) -> #ERROR: #NAME? (Unknown function: CODE) (Expected: #VALUE!)
+✗ B6: =CLEAN(C6) -> #ERROR: #NAME? (Unknown function: CLEAN) (Expected: Hi�!)
+✗ B7: =CLEAN(C7) -> #ERROR: #NAME? (Unknown function: CLEAN) (Expected: Normal)
+✗ B8: =REPT(C8,D8) -> #ERROR: #NAME? (Unknown function: REPT) (Expected: ababab)
+✗ B9: =REPT(C9,D9) -> #ERROR: #NAME? (Unknown function: REPT) (Expected: )
+✗ B10: =EXACT(C10,D10) -> #ERROR: #NAME? (Unknown function: EXACT) (Expected: True)
+✗ B11: =EXACT(C11,D11) -> #ERROR: #NAME? (Unknown function: EXACT) (Expected: False)
+✗ B12: =TEXT(C12,"000.0") -> #ERROR: #NAME? (Unknown function: TEXT) (Expected: 0.012)
+✗ B13: =TEXT(C13,"@") -> #ERROR: #NAME? (Unknown function: TEXT) (Expected: abc)
+✗ B14: =VALUE(C14) -> #ERROR: #NAME? (Unknown function: VALUE) (Expected: 45658)
+✗ B15: =VALUE(C15) -> #ERROR: #NAME? (Unknown function: VALUE) (Expected: #VALUE!)
+✗ B16: =CONCATENATE(C16,D16) -> #ERROR: #NAME? (Unknown function: CONCATENATE) (Expected: Cellz)
+✗ B17: =CONCATENATE(C17,D17) -> #ERROR: #NAME? (Unknown function: CONCATENATE) (Expected: A)
+✗ B18: =T(C18) -> #ERROR: #NAME? (Unknown function: T) (Expected: hello)
+✗ B19: =T(C19) -> #ERROR: #NAME? (Unknown function: T) (Expected: )
+----------------------------------------
+Results: 0 passed, 18 failed out of 18 spec formulas.
+
+[SPEC] formulas/text/odf-core.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B2: =RIGHT(C2,3) -> #ERROR: #NAME? (Unknown function: RIGHT) (Expected: llz)
+✗ B3: =RIGHT(C3,5) -> #ERROR: #NAME? (Unknown function: RIGHT) (Expected: Hi)
+✗ B4: =MID(C4,2,3) -> #ERROR: #NAME? (Unknown function: MID) (Expected: xam)
+✗ B5: =MID(C5,10,2) -> #ERROR: #NAME? (Unknown function: MID) (Expected: )
+✗ B6: =FIND("cat",C6) -> #ERROR: #NAME? (Unknown function: FIND) (Expected: 4)
+✗ B7: =FIND("z",C7) -> #ERROR: #NAME? (Unknown function: FIND) (Expected: #VALUE!)
+✗ B8: =SEARCH("CELL",C8) -> #ERROR: #NAME? (Unknown function: SEARCH) (Expected: 1)
+✗ B9: =SEARCH("z",C9) -> #ERROR: #NAME? (Unknown function: SEARCH) (Expected: #VALUE!)
+✗ B10: =SUBSTITUTE(C10,"na","NA") -> #ERROR: #NAME? (Unknown function: SUBSTITUTE) (Expected: baNANA)
+✗ B11: =SUBSTITUTE(C11,"na","NA",2) -> #ERROR: #NAME? (Unknown function: SUBSTITUTE) (Expected: banaNA)
+✗ B12: =REPLACE(C12,2,2,"ab") -> #ERROR: #NAME? (Unknown function: REPLACE) (Expected: 1ab45)
+✗ B13: =REPLACE(C13,10,2,"ab") -> #ERROR: #NAME? (Unknown function: REPLACE) (Expected: 12345ab)
+✗ B14: =LOWER(C14) -> #ERROR: #NAME? (Unknown function: LOWER) (Expected: mixed)
+✗ B15: =LOWER(C15) -> #ERROR: #NAME? (Unknown function: LOWER) (Expected: )
+✗ B16: =UPPER(C16) -> #ERROR: #NAME? (Unknown function: UPPER) (Expected: MIXED)
+✗ B17: =UPPER(C17) -> #ERROR: #NAME? (Unknown function: UPPER) (Expected: 123)
+✗ B18: =PROPER(C18) -> #ERROR: #NAME? (Unknown function: PROPER) (Expected: Hello World)
+✗ B19: =PROPER(C19) -> #ERROR: #NAME? (Unknown function: PROPER) (Expected: 123Abc)
+✗ B20: =TRIM(C20) -> #ERROR: #NAME? (Unknown function: TRIM) (Expected: spaced out)
+✗ B21: =TRIM(C21) -> #ERROR: #NAME? (Unknown function: TRIM) (Expected: )
+----------------------------------------
+Results: 0 passed, 20 failed out of 20 spec formulas.
+
+[SPEC] i18n-locale/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✗ B3: =SUM(C3;D3) -> #ERROR: No terminal matches ';' in the current parser context, at line 1 col 8
+
+=SUM(C3;D3)
+       ^
+Expected one of: 
+	* RPAR
+	* STAR
+	* SLASH
+	* LPAR
+	* MINUS
+	* COLON
+	* AMPERSAND
+	* PLUS
+	* BANG
+	* COMMA
+	* POWER
+	* COMP_OP
+ (Expected: 3)
+----------------------------------------
+Results: 0 passed, 1 failed out of 1 spec formulas.
+
+[SPEC] names/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+----------------------------------------
+Results: 0 passed, 0 failed out of 0 spec formulas.
+
+[SPEC] performance-scale/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B3: =B2+1 -> 2.0 (Expected: 2)
+✓ B4: =B3+1 -> 3.0 (Expected: 3)
+----------------------------------------
+Results: 2 passed, 0 failed out of 2 spec formulas.
+
+[SPEC] ranges-addressing/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B2: =SUM(C2:C4) -> 6.0 (Expected: 6)
+✓ B3: =$C$2 -> 1 (Expected: 1)
+✓ B4: =C4 -> 3 (Expected: 3)
+----------------------------------------
+Results: 3 passed, 0 failed out of 3 spec formulas.
+
+[SPEC] recalc-dependencies/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+✓ B3: =B2+1 -> 2.0 (Expected: 2)
+✓ B4: =B3+1 -> 3.0 (Expected: 3)
+----------------------------------------
+Results: 2 passed, 0 failed out of 2 spec formulas.
+
+[SPEC] serialization-formatting/basic.json
+
+Running specs for sheet: Sheet1
+----------------------------------------
+----------------------------------------
+Results: 0 passed, 0 failed out of 0 spec formulas.
+
+============================================================
+SUMMARY REPORT
+============================================================
+File                                               | Pass  | Fail 
+-----------------------------------------------------------------
+arrays-matrices/basic.json                         | 3     | 0    
+arrays-matrices/odf-matrix.json                    | 2     | 12   
+formulas/arithmetic/basic.json                     | 5     | 0    
+formulas/arithmetic/odf-base-conversion.json       | 0     | 24   
+formulas/arithmetic/odf-bitwise.json               | 0     | 18   
+formulas/arithmetic/odf-combinatorics.json         | 0     | 18   
+formulas/arithmetic/odf-inverse-trig-hyperbolic.json | 0     | 22   
+formulas/arithmetic/odf-math-core.json             | 19    | 0    
+formulas/arithmetic/odf-rounding.json              | 0     | 22   
+formulas/arithmetic/odf-trig-and-integer.json      | 0     | 24   
+formulas/arithmetic/operator-precedence.json       | 2     | 0    
+formulas/arithmetic/rounding-extended.json         | 0     | 13   
+formulas/arithmetic/type-coercion.json             | 2     | 0    
+formulas/date-time/basic.json                      | 0     | 3    
+formulas/date-time/odf-calendar.json               | 0     | 17   
+formulas/date-time/odf-extract.json                | 0     | 16   
+formulas/financial/odf-core.json                   | 0     | 14   
+formulas/logical/basic.json                        | 0     | 3    
+formulas/logical/ifs-switch-xor.json               | 0     | 9    
+formulas/logical/odf-info-extended.json            | 4     | 20   
+formulas/logical/odf-info.json                     | 3     | 18   
+formulas/lookup/basic.json                         | 1     | 2    
+formulas/lookup/odf-reference.json                 | 0     | 20   
+formulas/statistical/basic.json                    | 1     | 2    
+formulas/statistical/odf-aggregate.json            | 2     | 18   
+formulas/statistical/odf-conditional-aggregates.json | 0     | 10   
+formulas/statistical/odf-dispersion.json           | 2     | 22   
+formulas/text/basic.json                           | 0     | 3    
+formulas/text/odf-additional.json                  | 0     | 18   
+formulas/text/odf-core.json                        | 0     | 20   
+i18n-locale/basic.json                             | 0     | 1    
+names/basic.json                                   | 0     | 0    
+performance-scale/basic.json                       | 2     | 0    
+ranges-addressing/basic.json                       | 3     | 0    
+recalc-dependencies/basic.json                     | 2     | 0    
+serialization-formatting/basic.json                | 0     | 0    
+-----------------------------------------------------------------
+TOTAL                                              | 53    | 369  
+Total Formulas: 422
+Pass Rate: 12.6%

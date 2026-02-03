@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Test"
+        },
+        "A2": {
+          "value": "CONCAT"
+        },
+        "A3": {
+          "value": "LEFT"
+        },
+        "A4": {
+          "value": "LEN"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B2": {
+          "formula": "=CONCAT(C2,D2)",
+          "error": "#NAME?"
+        },
+        "B3": {
+          "value": "Cel",
+          "formula": "=LEFT(C3,3)"
+        },
+        "B4": {
+          "value": 4,
+          "formula": "=LEN(C4)"
+        },
+        "C2": {
+          "value": "Hello"
+        },
+        "C3": {
+          "value": "Cell"
+        },
+        "C4": {
+          "value": "Test"
+        },
+        "D2": {
+          "value": "!"
+        }
+      }
+    }
+  ]
+}

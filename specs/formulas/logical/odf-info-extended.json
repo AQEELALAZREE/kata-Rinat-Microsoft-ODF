@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "ISNONTEXT (edge: text)"
+        },
+        "A11": {
+          "value": "ISREF (happy)"
+        },
+        "A12": {
+          "value": "ISREF (edge: text)"
+        },
+        "A13": {
+          "value": "ISEVEN (happy)"
+        },
+        "A14": {
+          "value": "ISEVEN (edge: text)"
+        },
+        "A15": {
+          "value": "ISODD (happy)"
+        },
+        "A16": {
+          "value": "ISODD (edge: text)"
+        },
+        "A17": {
+          "value": "IFERROR (happy: no error)"
+        },
+        "A18": {
+          "value": "IFERROR (edge: error)"
+        },
+        "A19": {
+          "value": "IFNA (happy: #N/A)"
+        },
+        "A2": {
+          "value": "N (happy: number)"
+        },
+        "A20": {
+          "value": "IFNA (edge: other error)"
+        },
+        "A3": {
+          "value": "N (edge: text)"
+        },
+        "A4": {
+          "value": "N (edge: boolean)"
+        },
+        "A5": {
+          "value": "N (edge: error)"
+        },
+        "A6": {
+          "value": "NA (happy)"
+        },
+        "A7": {
+          "value": "TYPE (happy: number)"
+        },
+        "A8": {
+          "value": "TYPE (edge: error)"
+        },
+        "A9": {
+          "value": "ISNONTEXT (happy: number)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": false,
+          "formula": "=ISNONTEXT(C10)"
+        },
+        "B11": {
+          "value": true,
+          "formula": "=ISREF(C11)"
+        },
+        "B12": {
+          "value": true,
+          "formula": "=ISREF(C12)"
+        },
+        "B13": {
+          "value": true,
+          "formula": "=ISEVEN(C13)"
+        },
+        "B14": {
+          "formula": "=ISEVEN(C14)",
+          "error": "#VALUE!"
+        },
+        "B15": {
+          "value": true,
+          "formula": "=ISODD(C15)"
+        },
+        "B16": {
+          "formula": "=ISODD(C16)",
+          "error": "#VALUE!"
+        },
+        "B17": {
+          "value": 9,
+          "formula": "=IFERROR(C17,\"fallback\")"
+        },
+        "B18": {
+          "value": "fallback",
+          "formula": "=IFERROR(C18,\"fallback\")"
+        },
+        "B19": {
+          "formula": "=IFNA(C19,\"na\")",
+          "error": "#NAME?"
+        },
+        "B2": {
+          "value": 5,
+          "formula": "=N(C2)"
+        },
+        "B20": {
+          "formula": "=IFNA(C20,\"na\")",
+          "error": "#NAME?"
+        },
+        "B3": {
+          "value": 0,
+          "formula": "=N(C3)"
+        },
+        "B4": {
+          "value": 1,
+          "formula": "=N(C4)"
+        },
+        "B5": {
+          "formula": "=N(C5)",
+          "error": "#DIV/0!"
+        },
+        "B6": {
+          "formula": "=NA()",
+          "error": "#N/A"
+        },
+        "B7": {
+          "value": 1,
+          "formula": "=TYPE(C7)"
+        },
+        "B8": {
+          "value": 16,
+          "formula": "=TYPE(C8)"
+        },
+        "B9": {
+          "value": true,
+          "formula": "=ISNONTEXT(C9)"
+        },
+        "C10": {
+          "value": "hello"
+        },
+        "C11": {
+          "value": 10
+        },
+        "C12": {
+          "value": "C11"
+        },
+        "C13": {
+          "value": 4
+        },
+        "C14": {
+          "value": "x"
+        },
+        "C15": {
+          "value": 5
+        },
+        "C16": {
+          "value": "x"
+        },
+        "C17": {
+          "value": 9
+        },
+        "C18": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C19": {
+          "formula": "=NA()",
+          "error": "#N/A"
+        },
+        "C2": {
+          "value": 5
+        },
+        "C20": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C3": {
+          "value": "text"
+        },
+        "C4": {
+          "value": true
+        },
+        "C5": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C7": {
+          "value": 42
+        },
+        "C8": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C9": {
+          "value": 5
+        }
+      }
+    }
+  ]
+}

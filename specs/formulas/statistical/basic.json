@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "AVERAGE"},
+        "A3": {"value": "MAX"},
+        "A4": {"value": "MIN"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 1.5, "formula": "=AVERAGE(C2:D2)"},
+        "B3": {"value": 9, "formula": "=MAX(C3:D3)"},
+        "B4": {"value": 3, "formula": "=MIN(C4:D4)"},
+        "C2": {"value": 1},
+        "C3": {"value": 4},
+        "C4": {"value": 3},
+        "D2": {"value": 2},
+        "D3": {"value": 9},
+        "D4": {"value": 8}
+      }
+    }
+  ]
+}

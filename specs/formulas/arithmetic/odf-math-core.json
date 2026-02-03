@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Function"},
+        "A10": {"value": "LN (happy)"},
+        "A11": {"value": "LN (edge: zero)"},
+        "A12": {"value": "LOG10 (happy)"},
+        "A13": {"value": "LOG10 (edge: negative)"},
+        "A14": {"value": "SIN (happy)"},
+        "A15": {"value": "SIN (edge: text)"},
+        "A16": {"value": "COS (happy)"},
+        "A17": {"value": "COS (edge: text)"},
+        "A18": {"value": "TAN (happy)"},
+        "A19": {"value": "TAN (edge: text)"},
+        "A2": {"value": "ABS (happy)"},
+        "A20": {"value": "PI (happy)"},
+        "A3": {"value": "ABS (edge: zero)"},
+        "A4": {"value": "SQRT (happy)"},
+        "A5": {"value": "SQRT (edge: negative)"},
+        "A6": {"value": "POWER (happy)"},
+        "A7": {"value": "POWER (edge: zero exponent)"},
+        "A8": {"value": "EXP (happy)"},
+        "A9": {"value": "EXP (edge: text)"},
+        "B1": {"value": "Result"},
+        "B10": {"value": 0, "formula": "=LN(1)"},
+        "B11": {"formula": "=LN(0)", "error": "#NUM!"},
+        "B12": {"value": 2, "formula": "=LOG10(100)"},
+        "B13": {"formula": "=LOG10(-10)", "error": "#NUM!"},
+        "B14": {"value": 0, "formula": "=SIN(0)"},
+        "B15": {"formula": "=SIN(\"a\")", "error": "#VALUE!"},
+        "B16": {"value": 1, "formula": "=COS(0)"},
+        "B17": {"formula": "=COS(\"a\")", "error": "#VALUE!"},
+        "B18": {"value": 0, "formula": "=TAN(0)"},
+        "B19": {"formula": "=TAN(\"a\")", "error": "#VALUE!"},
+        "B2": {"value": 5, "formula": "=ABS(C2)"},
+        "B20": {"value": 3.141592653589793, "formula": "=PI()"},
+        "B3": {"value": 0, "formula": "=ABS(0)"},
+        "B4": {"value": 3, "formula": "=SQRT(C4)"},
+        "B5": {"formula": "=SQRT(C5)", "error": "#NUM!"},
+        "B6": {"value": 8, "formula": "=POWER(C6,D6)"},
+        "B7": {"value": 1, "formula": "=POWER(C7,D7)"},
+        "B8": {"value": 1, "formula": "=EXP(0)"},
+        "B9": {"formula": "=EXP(\"a\")", "error": "#VALUE!"},
+        "C2": {"value": -5},
+        "C4": {"value": 9},
+        "C5": {"value": -1},
+        "C6": {"value": 2},
+        "C7": {"value": 5},
+        "D6": {"value": 3},
+        "D7": {"value": 0}
+      }
+    }
+  ]
+}

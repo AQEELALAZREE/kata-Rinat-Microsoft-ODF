@@ -433,6 +433,71 @@ test-cases/
 }
 ```
 
+### Spec-Based Test Format (RFC 004)
+
+For small workbooks (up to a few dozen cells), use the JSON-based spec format defined in [RFC_004_TEXT_FORMAT.md](file:///Users/aqeelalazree/Downloads/kata%20Rinat%202026/specs/RFC_004_TEXT_FORMAT.md).
+
+**Advantages**:
+- Human-readable and hand-editable
+- Version control friendly (line-oriented diffs)
+- No Excel dependency for test creation
+- Deterministic and reproducible
+- Easy to review in pull requests
+
+**Example spec file** (`test-cases/specs/basic/sum.json`):
+```json
+{
+  "version": 1,
+  "description": "SUM function with range",
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": { "value": 1 },
+        "A2": { "value": 2 },
+        "A3": { "value": 3 },
+        "B1": { "formula": "=SUM(A1:A3)", "value": 6 }
+      }
+    }
+  ]
+}
+```
+
+**Usage in tests**:
+```rust
+#[test]
+fn test_sum_function() {
+    let spec = SpecParser::parse_file("test-cases/specs/basic/sum.json").unwrap();
+    let workbook = spec.to_workbook();
+    let engine = FormulaEngine::new();
+    engine.calculate(&mut workbook);
+    
+    // Validate all cells match expected values
+    for sheet in &spec.sheets {
+        for (addr, cell_spec) in &sheet.cells {
+            let actual = workbook.get_value(&format!("{}!{}", sheet.name, addr));
+            let expected = cell_spec.expected_value();
+            assert_eq!(actual, expected, "Mismatch at {}!{}", sheet.name, addr);
+        }
+    }
+}
+```
+
+**Available example specs**:
+- `test-cases/specs/basic/arithmetic.json` - Basic arithmetic operations
+- `test-cases/specs/basic/multi_sheet.json` - Cross-sheet references
+- `test-cases/specs/functions/sum.json` - SUM function
+- `test-cases/specs/functions/if.json` - IF function
+- `test-cases/specs/errors/error_types.json` - Error handling
+- `test-cases/specs/edge_cases/type_coercion.json` - Type coercion
+
+
+
 ## 7. Continuous Testing
 
 ### Automated Test Suite

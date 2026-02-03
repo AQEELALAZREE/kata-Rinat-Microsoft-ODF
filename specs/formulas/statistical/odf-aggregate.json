@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "COUNTBLANK (happy)"
+        },
+        "A11": {
+          "value": "COUNTBLANK (edge: none)"
+        },
+        "A12": {
+          "value": "COUNTIF (happy)"
+        },
+        "A13": {
+          "value": "COUNTIF (edge: no match)"
+        },
+        "A14": {
+          "value": "SUMIF (happy)"
+        },
+        "A15": {
+          "value": "SUMIF (edge: no match)"
+        },
+        "A16": {
+          "value": "AVERAGEIF (happy)"
+        },
+        "A17": {
+          "value": "AVERAGEIF (edge: no match)"
+        },
+        "A18": {
+          "value": "MEDIAN (happy)"
+        },
+        "A19": {
+          "value": "MEDIAN (edge: even count)"
+        },
+        "A2": {
+          "value": "SUM (happy)"
+        },
+        "A20": {
+          "value": "MODE (happy)"
+        },
+        "A21": {
+          "value": "MODE (edge: no repeats)"
+        },
+        "A3": {
+          "value": "SUM (edge: ignore text/blanks)"
+        },
+        "A4": {
+          "value": "PRODUCT (happy)"
+        },
+        "A5": {
+          "value": "PRODUCT (edge: zero)"
+        },
+        "A6": {
+          "value": "COUNT (happy)"
+        },
+        "A7": {
+          "value": "COUNT (edge: non-numeric)"
+        },
+        "A8": {
+          "value": "COUNTA (happy)"
+        },
+        "A9": {
+          "value": "COUNTA (edge: empty text)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": 2,
+          "formula": "=COUNTBLANK(C10:E10)"
+        },
+        "B11": {
+          "value": 0,
+          "formula": "=COUNTBLANK(C11:D11)"
+        },
+        "B12": {
+          "value": 2,
+          "formula": "=COUNTIF(C12:C15,2)"
+        },
+        "B13": {
+          "value": 0,
+          "formula": "=COUNTIF(C12:C15,5)"
+        },
+        "B14": {
+          "value": 7,
+          "formula": "=SUMIF(C16:C19,\"\u003e2\")"
+        },
+        "B15": {
+          "value": 0,
+          "formula": "=SUMIF(C16:C19,\"\u003e10\")"
+        },
+        "B16": {
+          "value": 6,
+          "formula": "=AVERAGEIF(C20:C23,\"\u003e=4\")"
+        },
+        "B17": {
+          "formula": "=AVERAGEIF(C20:C23,\"\u003e10\")",
+          "error": "#DIV/0!"
+        },
+        "B18": {
+          "value": 3,
+          "formula": "=MEDIAN(C24:G24)"
+        },
+        "B19": {
+          "value": 3,
+          "formula": "=MEDIAN(C25:F25)"
+        },
+        "B2": {
+          "value": 6,
+          "formula": "=SUM(C2:E2)"
+        },
+        "B20": {
+          "value": 2,
+          "formula": "=MODE(C26:G26)"
+        },
+        "B21": {
+          "formula": "=MODE(C27:E27)",
+          "error": "#N/A"
+        },
+        "B3": {
+          "value": 4,
+          "formula": "=SUM(C3:E3)"
+        },
+        "B4": {
+          "value": 24,
+          "formula": "=PRODUCT(C4:E4)"
+        },
+        "B5": {
+          "value": 0,
+          "formula": "=PRODUCT(C5:E5)"
+        },
+        "B6": {
+          "value": 4,
+          "formula": "=COUNT(C6:F6)"
+        },
+        "B7": {
+          "value": 1,
+          "formula": "=COUNT(C7:F7)"
+        },
+        "B8": {
+          "value": 3,
+          "formula": "=COUNTA(C8:E8)"
+        },
+        "B9": {
+          "value": 2,
+          "formula": "=COUNTA(C9:E9)"
+        },
+        "C10": {},
+        "C11": {
+          "value": 1
+        },
+        "C12": {
+          "value": 1
+        },
+        "C13": {
+          "value": 2
+        },
+        "C14": {
+          "value": 2
+        },
+        "C15": {
+          "value": 3
+        },
+        "C16": {
+          "value": 1
+        },
+        "C17": {
+          "value": 2
+        },
+        "C18": {
+          "value": 3
+        },
+        "C19": {
+          "value": 4
+        },
+        "C2": {
+          "value": 1
+        },
+        "C20": {
+          "value": 2
+        },
+        "C21": {
+          "value": 4
+        },
+        "C22": {
+          "value": 6
+        },
+        "C23": {
+          "value": 8
+        },
+        "C24": {
+          "value": 1
+        },
+        "C25": {
+          "value": 1
+        },
+        "C26": {
+          "value": 1
+        },
+        "C27": {
+          "value": 1
+        },
+        "C3": {
+          "value": 4
+        },
+        "C4": {
+          "value": 2
+        },
+        "C5": {
+          "value": 2
+        },
+        "C6": {
+          "value": 1
+        },
+        "C7": {
+          "value": 1
+        },
+        "C8": {
+          "value": 1
+        },
+        "C9": {
+          "value": ""
+        },
+        "D10": {
+          "value": ""
+        },
+        "D11": {
+          "value": "x"
+        },
+        "D2": {
+          "value": 2
+        },
+        "D24": {
+          "value": 2
+        },
+        "D25": {
+          "value": 2
+        },
+        "D26": {
+          "value": 2
+        },
+        "D27": {
+          "value": 2
+        },
+        "D3": {
+          "value": "x"
+        },
+        "D4": {
+          "value": 3
+        },
+        "D5": {
+          "value": 0
+        },
+        "D6": {
+          "value": 2
+        },
+        "D7": {
+          "value": "x"
+        },
+        "D8": {
+          "value": "x"
+        },
+        "D9": {},
+        "E10": {
+          "value": 1
+        },
+        "E2": {
+          "value": 3
+        },
+        "E24": {
+          "value": 3
+        },
+        "E25": {
+          "value": 4
+        },
+        "E26": {
+          "value": 2
+        },
+        "E27": {
+          "value": 3
+        },
+        "E3": {},
+        "E4": {
+          "value": 4
+        },
+        "E5": {
+          "value": 5
+        },
+        "E6": {
+          "value": 3
+        },
+        "E7": {},
+        "E8": {
+          "value": false
+        },
+        "E9": {
+          "value": 5
+        },
+        "F24": {
+          "value": 4
+        },
+        "F25": {
+          "value": 8
+        },
+        "F26": {
+          "value": 3
+        },
+        "F6": {
+          "value": 4
+        },
+        "F7": {
+          "value": true
+        },
+        "G24": {
+          "value": 5
+        },
+        "G26": {
+          "value": 4
+        }
+      }
+    }
+  ]
+}

@@ -20,24 +20,31 @@ formula: "=" expression
      | STRING           -> string
      | "TRUE"           -> true
      | "FALSE"          -> false
-     | CELL_REF         -> cell_reference
+     | function_call
+     | range_reference
+     | cell_reference
      | array_literal    -> array
-     | function_call    -> function
      | "(" expression ")"
+
+range_reference: cell_reference COLON cell_reference
+?cell_reference: SHEET_NAME "!" CELL_REF -> sheet_cell_ref
+               | CELL_REF               -> cell_ref
 
 array_literal: "{" array_row (";" array_row)* "}"
 array_row: expression ("," expression)*
 
 function_call: FUNCTION "(" [arguments] ")"
-arguments: expression ("," expression)*
+arguments: expression ((","|";") expression)*
 
 CELL_REF: /\$?[A-Z]+\$?[0-9]+/
+SHEET_NAME: /'[^']+'/ | /[a-zA-Z0-9_ ]+/
 FUNCTION: /[A-Z][A-Z0-9_.]*/
 PLUS: "+"
 MINUS: "-"
 STAR: "*"
 SLASH: "/"
 POWER: "^"
+COLON: ":"
 COMP_OP: "=" | "<>" | "<" | ">" | "<=" | ">="
 
 STRING: /"([^"]|"")*"/

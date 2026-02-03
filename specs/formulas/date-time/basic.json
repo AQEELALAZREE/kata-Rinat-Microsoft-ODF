@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Test"
+        },
+        "A2": {
+          "value": "DATE"
+        },
+        "A3": {
+          "value": "DAY"
+        },
+        "A4": {
+          "value": "MONTH"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B2": {
+          "value": 45292,
+          "formula": "=DATE(2024,1,1)"
+        },
+        "B3": {
+          "value": 1,
+          "formula": "=DAY(B2)"
+        },
+        "B4": {
+          "value": 1,
+          "formula": "=MONTH(B2)"
+        }
+      }
+    }
+  ]
+}

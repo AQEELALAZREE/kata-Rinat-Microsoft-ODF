@@ -1,0 +1,45 @@
+{
+    "version": 1,
+    "description": "Error types and propagation",
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Errors",
+            "cells": {
+                "A1": {
+                    "value": 10
+                },
+                "A2": {
+                    "value": 0
+                },
+                "A3": {
+                    "formula": "=A1/A2",
+                    "error": "#DIV/0!"
+                },
+                "A4": {
+                    "formula": "=A3+5",
+                    "error": "#DIV/0!"
+                },
+                "B1": {
+                    "formula": "=VLOOKUP(\"X\",A1:A2,1,0)",
+                    "error": "#N/A"
+                },
+                "B2": {
+                    "error": "#VALUE!"
+                },
+                "C1": {
+                    "formula": "=SQRT(-1)",
+                    "error": "#NUM!"
+                },
+                "C2": {
+                    "formula": "=UNKNOWNFUNC()",
+                    "error": "#NAME?"
+                }
+            }
+        }
+    ]
+}

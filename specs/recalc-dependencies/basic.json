@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "Base"},
+        "A3": {"value": "Depends on base"},
+        "A4": {"value": "Depends on prior"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 1},
+        "B3": {"value": 2, "formula": "=B2+1"},
+        "B4": {"value": 3, "formula": "=B3+1"}
+      }
+    }
+  ]
+}

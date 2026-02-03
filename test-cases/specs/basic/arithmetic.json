@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "description": "Basic arithmetic operations",
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": { "value": 10 },
+        "A2": { "value": 20 },
+        "A3": { "formula": "=A1+A2", "value": 30 },
+        "B1": { "formula": "=A1*2", "value": 20 },
+        "B2": { "formula": "=A2/2", "value": 10 },
+        "C1": { "formula": "=A1-A2", "value": -10 },
+        "C2": { "formula": "=B1+B2", "value": 30 }
+      }
+    }
+  ]
+}

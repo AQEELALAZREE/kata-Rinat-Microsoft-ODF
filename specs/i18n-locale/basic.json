@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "fr-FR",
+    "decimal_separator": ",",
+    "list_separator": ";"
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "Decimal comma"},
+        "A3": {"value": "List separator"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 1.23},
+        "B3": {"value": 3, "formula": "=SUM(C3;D3)"},
+        "C3": {"value": 1},
+        "D3": {"value": 2}
+      }
+    }
+  ]
+}

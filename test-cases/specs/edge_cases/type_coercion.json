@@ -1,0 +1,56 @@
+{
+    "version": 1,
+    "description": "Type coercion and conversion",
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Types",
+            "cells": {
+                "A1": {
+                    "value": "5"
+                },
+                "A2": {
+                    "formula": "=A1+3",
+                    "value": 8
+                },
+                "A3": {
+                    "formula": "=A1&\" items\"",
+                    "value": "5 items"
+                },
+                "B1": {
+                    "value": true
+                },
+                "B2": {
+                    "formula": "=B1+1",
+                    "value": 2
+                },
+                "B3": {
+                    "formula": "=B1*10",
+                    "value": 10
+                },
+                "C1": {
+                    "value": false
+                },
+                "C2": {
+                    "formula": "=C1+5",
+                    "value": 5
+                },
+                "D1": {
+                    "value": null
+                },
+                "D2": {
+                    "formula": "=D1+10",
+                    "value": 10
+                },
+                "D3": {
+                    "formula": "=D1&\"text\"",
+                    "value": "text"
+                }
+            }
+        }
+    ]
+}

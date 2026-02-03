@@ -1,0 +1,148 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "TIME (happy)"
+        },
+        "A11": {
+          "value": "TIME (edge: text)"
+        },
+        "A12": {
+          "value": "DATEVALUE (happy)"
+        },
+        "A13": {
+          "value": "DATEVALUE (edge: invalid)"
+        },
+        "A14": {
+          "value": "TIMEVALUE (happy)"
+        },
+        "A15": {
+          "value": "TIMEVALUE (edge: invalid)"
+        },
+        "A16": {
+          "value": "WEEKDAY (happy)"
+        },
+        "A17": {
+          "value": "WEEKDAY (edge: text)"
+        },
+        "A2": {
+          "value": "YEAR (happy)"
+        },
+        "A3": {
+          "value": "YEAR (edge: text)"
+        },
+        "A4": {
+          "value": "HOUR (happy)"
+        },
+        "A5": {
+          "value": "HOUR (edge: text)"
+        },
+        "A6": {
+          "value": "MINUTE (happy)"
+        },
+        "A7": {
+          "value": "MINUTE (edge: text)"
+        },
+        "A8": {
+          "value": "SECOND (happy)"
+        },
+        "A9": {
+          "value": "SECOND (edge: text)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": 0.2708333333333333,
+          "formula": "=TIME(6,30,0)"
+        },
+        "B11": {
+          "formula": "=TIME(\"x\",0,0)",
+          "error": "#VALUE!"
+        },
+        "B12": {
+          "value": 45389,
+          "formula": "=DATEVALUE(\"7/4/2024\")"
+        },
+        "B13": {
+          "formula": "=DATEVALUE(\"not-a-date\")",
+          "error": "#VALUE!"
+        },
+        "B14": {
+          "value": 0.7708333333333334,
+          "formula": "=TIMEVALUE(\"18:30\")"
+        },
+        "B15": {
+          "formula": "=TIMEVALUE(\"bad\")",
+          "error": "#VALUE!"
+        },
+        "B16": {
+          "value": 5,
+          "formula": "=WEEKDAY(C16)"
+        },
+        "B17": {
+          "formula": "=WEEKDAY(\"nope\")",
+          "error": "#VALUE!"
+        },
+        "B2": {
+          "value": 2024,
+          "formula": "=YEAR(C2)"
+        },
+        "B3": {
+          "formula": "=YEAR(\"nope\")",
+          "error": "#VALUE!"
+        },
+        "B4": {
+          "value": 15,
+          "formula": "=HOUR(C4)"
+        },
+        "B5": {
+          "formula": "=HOUR(\"nope\")",
+          "error": "#VALUE!"
+        },
+        "B6": {
+          "value": 30,
+          "formula": "=MINUTE(C6)"
+        },
+        "B7": {
+          "formula": "=MINUTE(\"nope\")",
+          "error": "#VALUE!"
+        },
+        "B8": {
+          "value": 15,
+          "formula": "=SECOND(C8)"
+        },
+        "B9": {
+          "formula": "=SECOND(\"nope\")",
+          "error": "#VALUE!"
+        },
+        "C16": {
+          "value": 45477
+        },
+        "C2": {
+          "value": 45477
+        },
+        "C4": {
+          "value": 0.625
+        },
+        "C6": {
+          "value": 0.6041666666666666
+        },
+        "C8": {
+          "value": 0.5001736111111111
+        }
+      }
+    }
+  ]
+}

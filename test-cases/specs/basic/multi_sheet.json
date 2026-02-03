@@ -1,0 +1,78 @@
+{
+    "version": 1,
+    "description": "Cross-sheet references",
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Data",
+            "cells": {
+                "A1": {
+                    "value": "Item"
+                },
+                "A2": {
+                    "value": "Apples"
+                },
+                "A3": {
+                    "value": "Oranges"
+                },
+                "A4": {
+                    "value": "Bananas"
+                },
+                "B1": {
+                    "value": "Quantity"
+                },
+                "B2": {
+                    "value": 10
+                },
+                "B3": {
+                    "value": 15
+                },
+                "B4": {
+                    "value": 8
+                },
+                "C1": {
+                    "value": "Price"
+                },
+                "C2": {
+                    "value": 1.5
+                },
+                "C3": {
+                    "value": 2.0
+                },
+                "C4": {
+                    "value": 0.75
+                }
+            }
+        },
+        {
+            "name": "Summary",
+            "cells": {
+                "A1": {
+                    "value": "Total Quantity"
+                },
+                "A2": {
+                    "value": "Total Value"
+                },
+                "A3": {
+                    "value": "Average Price"
+                },
+                "B1": {
+                    "formula": "=SUM(Data!B2:B4)",
+                    "value": 33
+                },
+                "B2": {
+                    "formula": "=SUMPRODUCT(Data!B2:B4,Data!C2:C4)",
+                    "value": 42.0
+                },
+                "B3": {
+                    "formula": "=AVERAGE(Data!C2:C4)",
+                    "value": 1.4166666666666667
+                }
+            }
+        }
+    ]
+}

@@ -30,8 +30,27 @@ class FormulaTransformer(Transformer):
     def array_row(self, items):
         return items
     
-    def cell_reference(self, items):
-        return {"type": "cell_reference", "address": str(items[0]).replace("$", "")}
+    def sheet_cell_ref(self, items):
+        sheet = str(items[0]).strip("'")
+        address = str(items[1]).replace("$", "")
+        return {"type": "cell_reference", "sheet": sheet, "address": address}
+
+    def cell_ref(self, items):
+        address = str(items[0]).replace("$", "")
+        return {"type": "cell_reference", "sheet": None, "address": address}
+
+    def range_reference(self, items):
+        if len(items) == 3:
+            return {"type": "range_reference", "start": items[0], "end": items[2]}
+        return {"type": "range_reference", "start": items[0], "end": items[1]}
+
+    def function_call(self, items):
+        func_name = str(items[0]).upper()
+        args = items[1] if len(items) > 1 and items[1] is not None else []
+        return {"type": "function", "name": func_name, "args": args}
+
+    def arguments(self, items):
+        return items
 
     def unary_expr(self, items):
         if len(items) == 1:
@@ -82,7 +101,7 @@ class FormulaParser:
     def __init__(self, grammar_path):
         with open(grammar_path, 'r') as f:
             grammar = f.read()
-        self.lark = Lark(grammar, start='formula', parser='lalr')
+        self.lark = Lark(grammar, start='formula', parser='earley')
         self.transformer = FormulaTransformer()
     
     def parse(self, formula):

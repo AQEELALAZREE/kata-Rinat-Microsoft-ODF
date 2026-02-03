@@ -50,7 +50,7 @@ class ExcelValidator:
             self.workbook = self.excel.Workbooks.Open(str(self.excel_file.absolute()))
         else:  # mac
             self.excel = app('Microsoft Excel')
-            self.workbook = self.excel.open(self.excel_file)
+            self.workbook = self.excel.open(str(self.excel_file.resolve()))
     
     def close_excel(self):
         """Close Excel application"""
@@ -65,7 +65,9 @@ class ExcelValidator:
         if PLATFORM == 'windows':
             self.excel.CalculateFull()
         else:  # mac
-            self.excel.calculate()
+            # Excel for macOS recalculates automatically when opening/reading.
+            # appscript does not expose an application-level 'calculate' command.
+            pass
     
     def extract_results(self):
         """Extract all formula results from Excel"""

@@ -1,0 +1,312 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "STDEVP (happy)"
+        },
+        "A11": {
+          "value": "STDEVP (edge: single value)"
+        },
+        "A12": {
+          "value": "VAR (happy)"
+        },
+        "A13": {
+          "value": "VAR (edge: single value)"
+        },
+        "A14": {
+          "value": "VARP (happy)"
+        },
+        "A15": {
+          "value": "VARP (edge: single value)"
+        },
+        "A16": {
+          "value": "RANK (happy)"
+        },
+        "A17": {
+          "value": "RANK (edge: non-numeric)"
+        },
+        "A18": {
+          "value": "LARGE (happy)"
+        },
+        "A19": {
+          "value": "LARGE (edge: k too big)"
+        },
+        "A2": {
+          "value": "AVERAGEA (happy)"
+        },
+        "A20": {
+          "value": "SMALL (happy)"
+        },
+        "A21": {
+          "value": "SMALL (edge: k zero)"
+        },
+        "A22": {
+          "value": "PERCENTILE (happy)"
+        },
+        "A23": {
+          "value": "PERCENTILE (edge: k out of range)"
+        },
+        "A3": {
+          "value": "AVERAGEA (edge: all blank)"
+        },
+        "A4": {
+          "value": "MAXA (happy)"
+        },
+        "A5": {
+          "value": "MAXA (edge: error propagation)"
+        },
+        "A6": {
+          "value": "MINA (happy)"
+        },
+        "A7": {
+          "value": "MINA (edge: error propagation)"
+        },
+        "A8": {
+          "value": "STDEV (happy)"
+        },
+        "A9": {
+          "value": "STDEV (edge: single value)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": 0.816496580927726,
+          "formula": "=STDEVP(C10:E10)"
+        },
+        "B11": {
+          "value": 0,
+          "formula": "=STDEVP(C11)"
+        },
+        "B12": {
+          "value": 1,
+          "formula": "=VAR(C12:E12)"
+        },
+        "B13": {
+          "formula": "=VAR(C13)",
+          "error": "#DIV/0!"
+        },
+        "B14": {
+          "value": 0.6666666666666666,
+          "formula": "=VARP(C14:E14)"
+        },
+        "B15": {
+          "value": 0,
+          "formula": "=VARP(C15)"
+        },
+        "B16": {
+          "value": 2,
+          "formula": "=RANK(C16,C16:C18)"
+        },
+        "B17": {
+          "formula": "=RANK(\"x\",C16:C18)",
+          "error": "#VALUE!"
+        },
+        "B18": {
+          "value": 7,
+          "formula": "=LARGE(C19:C22,2)"
+        },
+        "B19": {
+          "formula": "=LARGE(C19:C22,5)",
+          "error": "#NUM!"
+        },
+        "B2": {
+          "value": 1,
+          "formula": "=AVERAGEA(C2:E2)"
+        },
+        "B20": {
+          "value": 4,
+          "formula": "=SMALL(C23:C26,2)"
+        },
+        "B21": {
+          "formula": "=SMALL(C23:C26,0)",
+          "error": "#NUM!"
+        },
+        "B22": {
+          "value": 2.5,
+          "formula": "=PERCENTILE(C27:C30,0.5)"
+        },
+        "B23": {
+          "formula": "=PERCENTILE(C27:C30,1.5)",
+          "error": "#NUM!"
+        },
+        "B3": {
+          "formula": "=AVERAGEA(C3:E3)",
+          "error": "#DIV/0!"
+        },
+        "B4": {
+          "value": 2,
+          "formula": "=MAXA(C4:E4)"
+        },
+        "B5": {
+          "formula": "=MAXA(C5:D5)",
+          "error": "#DIV/0!"
+        },
+        "B6": {
+          "value": 0,
+          "formula": "=MINA(C6:E6)"
+        },
+        "B7": {
+          "formula": "=MINA(C7:D7)",
+          "error": "#DIV/0!"
+        },
+        "B8": {
+          "value": 1,
+          "formula": "=STDEV(C8:E8)"
+        },
+        "B9": {
+          "formula": "=STDEV(C9)",
+          "error": "#DIV/0!"
+        },
+        "C10": {
+          "value": 1
+        },
+        "C11": {
+          "value": 5
+        },
+        "C12": {
+          "value": 1
+        },
+        "C13": {
+          "value": 5
+        },
+        "C14": {
+          "value": 1
+        },
+        "C15": {
+          "value": 5
+        },
+        "C16": {
+          "value": 20
+        },
+        "C17": {
+          "value": 10
+        },
+        "C18": {
+          "value": 30
+        },
+        "C19": {
+          "value": 4
+        },
+        "C2": {
+          "value": 2
+        },
+        "C20": {
+          "value": 9
+        },
+        "C21": {
+          "value": 2
+        },
+        "C22": {
+          "value": 7
+        },
+        "C23": {
+          "value": 4
+        },
+        "C24": {
+          "value": 3
+        },
+        "C25": {
+          "value": 9
+        },
+        "C26": {
+          "value": 7
+        },
+        "C27": {
+          "value": 1
+        },
+        "C28": {
+          "value": 2
+        },
+        "C29": {
+          "value": 3
+        },
+        "C3": {},
+        "C30": {
+          "value": 4
+        },
+        "C4": {
+          "value": 2
+        },
+        "C5": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C6": {
+          "value": 2
+        },
+        "C7": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C8": {
+          "value": 1
+        },
+        "C9": {
+          "value": 5
+        },
+        "D10": {
+          "value": 2
+        },
+        "D12": {
+          "value": 2
+        },
+        "D14": {
+          "value": 2
+        },
+        "D2": {
+          "value": true
+        },
+        "D3": {},
+        "D4": {
+          "value": false
+        },
+        "D5": {
+          "value": 3
+        },
+        "D6": {
+          "value": true
+        },
+        "D7": {
+          "value": 3
+        },
+        "D8": {
+          "value": 2
+        },
+        "E10": {
+          "value": 3
+        },
+        "E12": {
+          "value": 3
+        },
+        "E14": {
+          "value": 3
+        },
+        "E2": {
+          "value": "x"
+        },
+        "E3": {},
+        "E4": {
+          "value": "x"
+        },
+        "E6": {
+          "value": "x"
+        },
+        "E8": {
+          "value": 3
+        }
+      }
+    }
+  ]
+}

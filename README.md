@@ -28,6 +28,7 @@ See the `/docs` directory for detailed architectural specifications:
 ├── docs/                    # Architecture and design documentation
 ├── specs/                   # Detailed component specifications
 ├── test-cases/             # Excel test files and expected results
+│   └── specs/              # JSON-based spec files (RFC 004)
 ├── examples/               # Example usage and integration patterns
 └── review-checklists/      # Code review guidelines
 ```

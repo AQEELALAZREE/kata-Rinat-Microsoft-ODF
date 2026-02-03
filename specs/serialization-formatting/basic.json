@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "Leading zeros"},
+        "A3": {"value": "Text number"},
+        "A4": {"value": "Boolean text"},
+        "B1": {"value": "Result"},
+        "B2": {"value": "00123"},
+        "B3": {"value": "42"},
+        "B4": {"value": "TRUE"}
+      }
+    }
+  ]
+}

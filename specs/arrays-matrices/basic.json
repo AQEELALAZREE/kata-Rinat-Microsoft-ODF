@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "SUM array"},
+        "A3": {"value": "TRANSPOSE first"},
+        "A4": {"value": "Array literal"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 6, "formula": "=SUM({1,2,3})"},
+        "B3": {"value": 1, "formula": "=INDEX(TRANSPOSE({1,2,3}),1)"},
+        "B4": {"value": 5, "formula": "=INDEX({4,5},2)"}
+      }
+    }
+  ]
+}

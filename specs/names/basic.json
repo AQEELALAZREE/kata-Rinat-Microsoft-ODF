@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "Named range placeholder"},
+        "A3": {"value": "Named expression placeholder"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 1},
+        "B3": {"value": 2}
+      }
+    }
+  ]
+}

@@ -1,0 +1,212 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "ADDRESS (edge: row 0)"
+        },
+        "A11": {
+          "value": "ROW (happy)"
+        },
+        "A12": {
+          "value": "ROW (edge: omitted reference)"
+        },
+        "A13": {
+          "value": "COLUMN (happy)"
+        },
+        "A14": {
+          "value": "COLUMN (edge: omitted reference)"
+        },
+        "A15": {
+          "value": "ROWS (happy)"
+        },
+        "A16": {
+          "value": "ROWS (edge: single cell)"
+        },
+        "A17": {
+          "value": "COLUMNS (happy)"
+        },
+        "A18": {
+          "value": "COLUMNS (edge: single column)"
+        },
+        "A19": {
+          "value": "OFFSET (happy)"
+        },
+        "A2": {
+          "value": "HLOOKUP (happy)"
+        },
+        "A20": {
+          "value": "OFFSET (edge: zero height)"
+        },
+        "A21": {
+          "value": "INDIRECT (happy)"
+        },
+        "A22": {
+          "value": "INDIRECT (edge: invalid reference)"
+        },
+        "A3": {
+          "value": "HLOOKUP (edge: row out of range)"
+        },
+        "A4": {
+          "value": "LOOKUP (happy)"
+        },
+        "A5": {
+          "value": "LOOKUP (edge: below range)"
+        },
+        "A7": {
+          "value": "CHOOSE (happy)"
+        },
+        "A8": {
+          "value": "CHOOSE (edge: index out of range)"
+        },
+        "A9": {
+          "value": "ADDRESS (happy)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "formula": "=ADDRESS(0,2)",
+          "error": "#VALUE!"
+        },
+        "B11": {
+          "value": 11,
+          "formula": "=ROW(C11)"
+        },
+        "B12": {
+          "value": 12,
+          "formula": "=ROW()"
+        },
+        "B13": {
+          "value": 4,
+          "formula": "=COLUMN(D13)"
+        },
+        "B14": {
+          "value": 2,
+          "formula": "=COLUMN()"
+        },
+        "B15": {
+          "value": 3,
+          "formula": "=ROWS(C15:E17)"
+        },
+        "B16": {
+          "value": 1,
+          "formula": "=ROWS(C16:C16)"
+        },
+        "B17": {
+          "value": 3,
+          "formula": "=COLUMNS(C17:E17)"
+        },
+        "B18": {
+          "value": 1,
+          "formula": "=COLUMNS(D18:D18)"
+        },
+        "B19": {
+          "value": 555,
+          "formula": "=OFFSET(C19,1,2)"
+        },
+        "B2": {
+          "value": 20,
+          "formula": "=HLOOKUP(\"B\",C2:E3,2,FALSE)"
+        },
+        "B20": {
+          "formula": "=OFFSET(C19,0,0,0,1)",
+          "error": "#REF!"
+        },
+        "B21": {
+          "value": 42,
+          "formula": "=INDIRECT(\"C21\")"
+        },
+        "B22": {
+          "formula": "=INDIRECT(\"Z0\")",
+          "error": "#REF!"
+        },
+        "B3": {
+          "formula": "=HLOOKUP(\"B\",C2:E3,5,FALSE)",
+          "error": "#REF!"
+        },
+        "B4": {
+          "value": "mid",
+          "formula": "=LOOKUP(2,C4:C6,D4:D6)"
+        },
+        "B5": {
+          "formula": "=LOOKUP(0.5,C4:C6,D4:D6)",
+          "error": "#N/A"
+        },
+        "B7": {
+          "value": "blue",
+          "formula": "=CHOOSE(2,\"red\",\"blue\",\"green\")"
+        },
+        "B8": {
+          "formula": "=CHOOSE(0,\"red\",\"blue\")",
+          "error": "#VALUE!"
+        },
+        "B9": {
+          "value": "$B$4",
+          "formula": "=ADDRESS(4,2)"
+        },
+        "C11": {
+          "value": 0
+        },
+        "C19": {
+          "value": 100
+        },
+        "C2": {
+          "value": "A"
+        },
+        "C21": {
+          "value": 42
+        },
+        "C3": {
+          "value": 10
+        },
+        "C4": {
+          "value": 1
+        },
+        "C5": {
+          "value": 2
+        },
+        "C6": {
+          "value": 3
+        },
+        "D13": {
+          "value": 0
+        },
+        "D2": {
+          "value": "B"
+        },
+        "D3": {
+          "value": 20
+        },
+        "D4": {
+          "value": "low"
+        },
+        "D5": {
+          "value": "mid"
+        },
+        "D6": {
+          "value": "high"
+        },
+        "E2": {
+          "value": "C"
+        },
+        "E20": {
+          "value": 555
+        },
+        "E3": {
+          "value": 30
+        }
+      }
+    }
+  ]
+}

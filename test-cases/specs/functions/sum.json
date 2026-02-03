@@ -1,0 +1,43 @@
+{
+    "version": 1,
+    "description": "SUM function with range",
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Data",
+            "cells": {
+                "A1": {
+                    "value": 1
+                },
+                "A2": {
+                    "value": 2
+                },
+                "A3": {
+                    "value": 3
+                },
+                "A4": {
+                    "value": 4
+                },
+                "A5": {
+                    "value": 5
+                },
+                "B1": {
+                    "formula": "=SUM(A1:A5)",
+                    "value": 15
+                },
+                "B2": {
+                    "formula": "=SUM(A1,A3,A5)",
+                    "value": 9
+                },
+                "B3": {
+                    "formula": "=SUM(A1:A3,A4:A5)",
+                    "value": 15
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {"value": "Test"},
+        "A2": {"value": "SUM range"},
+        "A3": {"value": "ABS reference"},
+        "A4": {"value": "Relative reference"},
+        "B1": {"value": "Result"},
+        "B2": {"value": 6, "formula": "=SUM(C2:C4)"},
+        "B3": {"value": 1, "formula": "=$C$2"},
+        "B4": {"value": 3, "formula": "=C4"},
+        "C2": {"value": 1},
+        "C3": {"value": 2},
+        "C4": {"value": 3}
+      }
+    }
+  ]
+}

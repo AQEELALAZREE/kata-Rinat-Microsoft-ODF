@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Case"
+        },
+        "A10": {
+          "value": "XOR (odd true)"
+        },
+        "A11": {
+          "value": "XOR (even true)"
+        },
+        "A12": {
+          "value": "XOR (all false)"
+        },
+        "A2": {
+          "value": "IFS (mid)"
+        },
+        "A3": {
+          "value": "IFS (no match)"
+        },
+        "A4": {
+          "value": "IFS (first match)"
+        },
+        "A6": {
+          "value": "SWITCH (match)"
+        },
+        "A7": {
+          "value": "SWITCH (default)"
+        },
+        "A8": {
+          "value": "SWITCH (no match)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": true,
+          "formula": "=XOR(C10,D10,E10)"
+        },
+        "B11": {
+          "value": false,
+          "formula": "=XOR(C11,D11,E11)"
+        },
+        "B12": {
+          "value": false,
+          "formula": "=XOR(C12,D12)"
+        },
+        "B2": {
+          "value": "mid",
+          "formula": "=IFS(C2\u003e10,\"big\",C2\u003e5,\"mid\",TRUE,\"small\")"
+        },
+        "B3": {
+          "formula": "=IFS(C3\u003e10,\"big\",C3\u003e5,\"mid\")",
+          "error": "#N/A"
+        },
+        "B4": {
+          "value": "big",
+          "formula": "=IFS(C4\u003e10,\"big\",C4\u003e5,\"mid\",TRUE,\"small\")"
+        },
+        "B6": {
+          "value": "two",
+          "formula": "=SWITCH(C6,1,\"one\",2,\"two\",\"other\")"
+        },
+        "B7": {
+          "value": "other",
+          "formula": "=SWITCH(C7,\"red\",\"stop\",\"green\",\"go\",\"other\")"
+        },
+        "B8": {
+          "formula": "=SWITCH(C8,\"red\",\"stop\",\"green\",\"go\")",
+          "error": "#N/A"
+        },
+        "C10": {
+          "value": true
+        },
+        "C11": {
+          "value": true
+        },
+        "C12": {
+          "value": false
+        },
+        "C2": {
+          "value": 7
+        },
+        "C3": {
+          "value": 3
+        },
+        "C4": {
+          "value": 12
+        },
+        "C6": {
+          "value": 2
+        },
+        "C7": {
+          "value": "blue"
+        },
+        "C8": {
+          "value": "blue"
+        },
+        "D10": {
+          "value": false
+        },
+        "D11": {
+          "value": false
+        },
+        "D12": {
+          "value": false
+        },
+        "E10": {
+          "value": false
+        },
+        "E11": {
+          "value": true
+        }
+      }
+    }
+  ]
+}

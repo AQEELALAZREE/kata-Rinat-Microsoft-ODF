@@ -1,0 +1,196 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "ISNUMBER (happy)"
+        },
+        "A11": {
+          "value": "ISNUMBER (edge: numeric text)"
+        },
+        "A12": {
+          "value": "ISTEXT (happy)"
+        },
+        "A13": {
+          "value": "ISTEXT (edge: number)"
+        },
+        "A14": {
+          "value": "ISLOGICAL (happy)"
+        },
+        "A15": {
+          "value": "ISLOGICAL (edge: number)"
+        },
+        "A16": {
+          "value": "ISERROR (happy)"
+        },
+        "A17": {
+          "value": "ISERROR (edge: number)"
+        },
+        "A18": {
+          "value": "ISERR (happy)"
+        },
+        "A19": {
+          "value": "ISERR (edge: #N/A)"
+        },
+        "A2": {
+          "value": "IF (happy)"
+        },
+        "A20": {
+          "value": "ISNA (happy)"
+        },
+        "A21": {
+          "value": "ISNA (edge: other error)"
+        },
+        "A3": {
+          "value": "IF (edge: skip error branch)"
+        },
+        "A4": {
+          "value": "TRUE (happy)"
+        },
+        "A6": {
+          "value": "FALSE (happy)"
+        },
+        "A8": {
+          "value": "ISBLANK (happy)"
+        },
+        "A9": {
+          "value": "ISBLANK (edge: text)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "value": true,
+          "formula": "=ISNUMBER(C10)"
+        },
+        "B11": {
+          "value": false,
+          "formula": "=ISNUMBER(C11)"
+        },
+        "B12": {
+          "value": true,
+          "formula": "=ISTEXT(C12)"
+        },
+        "B13": {
+          "value": false,
+          "formula": "=ISTEXT(C13)"
+        },
+        "B14": {
+          "value": true,
+          "formula": "=ISLOGICAL(C14)"
+        },
+        "B15": {
+          "value": false,
+          "formula": "=ISLOGICAL(C15)"
+        },
+        "B16": {
+          "value": true,
+          "formula": "=ISERROR(C16)"
+        },
+        "B17": {
+          "value": false,
+          "formula": "=ISERROR(C17)"
+        },
+        "B18": {
+          "value": true,
+          "formula": "=ISERR(C18)"
+        },
+        "B19": {
+          "value": false,
+          "formula": "=ISERR(C19)"
+        },
+        "B2": {
+          "value": "yes",
+          "formula": "=IF(C2,\"yes\",\"no\")"
+        },
+        "B20": {
+          "value": false,
+          "formula": "=ISNA(C20)"
+        },
+        "B21": {
+          "value": false,
+          "formula": "=ISNA(C21)"
+        },
+        "B3": {
+          "value": "safe",
+          "formula": "=IF(C3,1/0,\"safe\")"
+        },
+        "B4": {
+          "value": true,
+          "formula": "=TRUE()"
+        },
+        "B6": {
+          "value": false,
+          "formula": "=FALSE()"
+        },
+        "B8": {
+          "value": true,
+          "formula": "=ISBLANK(C8)"
+        },
+        "B9": {
+          "value": false,
+          "formula": "=ISBLANK(C9)"
+        },
+        "C10": {
+          "value": 5
+        },
+        "C11": {
+          "value": "5"
+        },
+        "C12": {
+          "value": "hi"
+        },
+        "C13": {
+          "value": 5
+        },
+        "C14": {
+          "value": true
+        },
+        "C15": {
+          "value": 1
+        },
+        "C16": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C17": {
+          "value": 1
+        },
+        "C18": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C19": {
+          "value": "#N/A"
+        },
+        "C2": {
+          "value": true
+        },
+        "C20": {
+          "value": "#N/A"
+        },
+        "C21": {
+          "formula": "=1/0",
+          "error": "#DIV/0!"
+        },
+        "C3": {
+          "value": false
+        },
+        "C8": {},
+        "C9": {
+          "value": ""
+        }
+      }
+    }
+  ]
+}

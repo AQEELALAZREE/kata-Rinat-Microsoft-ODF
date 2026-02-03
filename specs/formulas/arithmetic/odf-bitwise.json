@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Function"
+        },
+        "A10": {
+          "value": "BITXOR (edge: text)"
+        },
+        "A11": {
+          "value": "BITLSHIFT (happy)"
+        },
+        "A12": {
+          "value": "BITLSHIFT (edge: negative shift)"
+        },
+        "A13": {
+          "value": "BITLSHIFT (edge: text)"
+        },
+        "A14": {
+          "value": "BITRSHIFT (happy)"
+        },
+        "A15": {
+          "value": "BITRSHIFT (edge: negative shift)"
+        },
+        "A16": {
+          "value": "BITRSHIFT (edge: text)"
+        },
+        "A17": {
+          "value": "BITNOT (happy)"
+        },
+        "A18": {
+          "value": "BITNOT (edge: negative)"
+        },
+        "A19": {
+          "value": "BITNOT (edge: text)"
+        },
+        "A2": {
+          "value": "BITAND (happy)"
+        },
+        "A3": {
+          "value": "BITAND (edge: negative)"
+        },
+        "A4": {
+          "value": "BITAND (edge: text)"
+        },
+        "A5": {
+          "value": "BITOR (happy)"
+        },
+        "A6": {
+          "value": "BITOR (edge: negative)"
+        },
+        "A7": {
+          "value": "BITOR (edge: text)"
+        },
+        "A8": {
+          "value": "BITXOR (happy)"
+        },
+        "A9": {
+          "value": "BITXOR (edge: negative)"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B10": {
+          "formula": "=BITXOR(C10,D10)",
+          "error": "#NAME?"
+        },
+        "B11": {
+          "formula": "=BITLSHIFT(C11,D11)",
+          "error": "#NAME?"
+        },
+        "B12": {
+          "formula": "=BITLSHIFT(C12,D12)",
+          "error": "#NAME?"
+        },
+        "B13": {
+          "formula": "=BITLSHIFT(C13,D13)",
+          "error": "#NAME?"
+        },
+        "B14": {
+          "formula": "=BITRSHIFT(C14,D14)",
+          "error": "#NAME?"
+        },
+        "B15": {
+          "formula": "=BITRSHIFT(C15,D15)",
+          "error": "#NAME?"
+        },
+        "B16": {
+          "formula": "=BITRSHIFT(C16,D16)",
+          "error": "#NAME?"
+        },
+        "B17": {
+          "formula": "=BITNOT(C17)",
+          "error": "#NAME?"
+        },
+        "B18": {
+          "formula": "=BITNOT(C18)",
+          "error": "#NAME?"
+        },
+        "B19": {
+          "formula": "=BITNOT(C19)",
+          "error": "#NAME?"
+        },
+        "B2": {
+          "formula": "=BITAND(C2,D2)",
+          "error": "#NAME?"
+        },
+        "B3": {
+          "formula": "=BITAND(C3,D3)",
+          "error": "#NAME?"
+        },
+        "B4": {
+          "formula": "=BITAND(C4,D4)",
+          "error": "#NAME?"
+        },
+        "B5": {
+          "formula": "=BITOR(C5,D5)",
+          "error": "#NAME?"
+        },
+        "B6": {
+          "formula": "=BITOR(C6,D6)",
+          "error": "#NAME?"
+        },
+        "B7": {
+          "formula": "=BITOR(C7,D7)",
+          "error": "#NAME?"
+        },
+        "B8": {
+          "formula": "=BITXOR(C8,D8)",
+          "error": "#NAME?"
+        },
+        "B9": {
+          "formula": "=BITXOR(C9,D9)",
+          "error": "#NAME?"
+        },
+        "C10": {
+          "value": "nope"
+        },
+        "C11": {
+          "value": 5
+        },
+        "C12": {
+          "value": 5
+        },
+        "C13": {
+          "value": "nope"
+        },
+        "C14": {
+          "value": 25
+        },
+        "C15": {
+          "value": 25
+        },
+        "C16": {
+          "value": "nope"
+        },
+        "C17": {
+          "value": 0
+        },
+        "C18": {
+          "value": -1
+        },
+        "C19": {
+          "value": "nope"
+        },
+        "C2": {
+          "value": 13
+        },
+        "C3": {
+          "value": -1
+        },
+        "C4": {
+          "value": "nope"
+        },
+        "C5": {
+          "value": 10
+        },
+        "C6": {
+          "value": -5
+        },
+        "C7": {
+          "value": "nope"
+        },
+        "C8": {
+          "value": 12
+        },
+        "C9": {
+          "value": -4
+        },
+        "D10": {
+          "value": 1
+        },
+        "D11": {
+          "value": 3
+        },
+        "D12": {
+          "value": -1
+        },
+        "D13": {
+          "value": 1
+        },
+        "D14": {
+          "value": 2
+        },
+        "D15": {
+          "value": -2
+        },
+        "D16": {
+          "value": 2
+        },
+        "D2": {
+          "value": 7
+        },
+        "D3": {
+          "value": 7
+        },
+        "D4": {
+          "value": 1
+        },
+        "D5": {
+          "value": 5
+        },
+        "D6": {
+          "value": 3
+        },
+        "D7": {
+          "value": 1
+        },
+        "D8": {
+          "value": 6
+        },
+        "D9": {
+          "value": 1
+        }
+      }
+    }
+  ]
+}

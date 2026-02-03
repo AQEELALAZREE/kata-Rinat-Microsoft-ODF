@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "meta": {
+    "locale": "en-US",
+    "decimal_separator": ".",
+    "list_separator": ","
+  },
+  "sheets": [
+    {
+      "name": "Sheet1",
+      "cells": {
+        "A1": {
+          "value": "Test"
+        },
+        "A2": {
+          "value": "VLOOKUP exact"
+        },
+        "A3": {
+          "value": "INDEX"
+        },
+        "A4": {
+          "value": "MATCH"
+        },
+        "B1": {
+          "value": "Result"
+        },
+        "B2": {
+          "value": 20,
+          "formula": "=VLOOKUP(\"B\",D2:E3,2,FALSE)"
+        },
+        "B3": {
+          "value": 10,
+          "formula": "=INDEX(E2:E3,1)"
+        },
+        "B4": {
+          "value": 2,
+          "formula": "=MATCH(\"B\",D2:D3,0)"
+        },
+        "D2": {
+          "value": "A"
+        },
+        "D3": {
+          "value": "B"
+        },
+        "E2": {
+          "value": 10
+        },
+        "E3": {
+          "value": 20
+        }
+      }
+    }
+  ]
+}

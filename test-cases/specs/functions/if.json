@@ -1,0 +1,42 @@
+{
+    "version": 1,
+    "description": "IF function with logical conditions",
+    "meta": {
+        "locale": "en-US",
+        "decimal_separator": ".",
+        "list_separator": ","
+    },
+    "sheets": [
+        {
+            "name": "Logic",
+            "cells": {
+                "A1": {
+                    "value": 10
+                },
+                "A2": {
+                    "value": 5
+                },
+                "B1": {
+                    "formula": "=IF(A1>A2,\"Greater\",\"Less or Equal\")",
+                    "value": "Greater"
+                },
+                "B2": {
+                    "formula": "=IF(A1<A2,\"Less\",\"Greater or Equal\")",
+                    "value": "Greater or Equal"
+                },
+                "B3": {
+                    "formula": "=IF(A1=A2,\"Equal\",\"Not Equal\")",
+                    "value": "Not Equal"
+                },
+                "C1": {
+                    "formula": "=IF(A1>0,A1*2,0)",
+                    "value": 20
+                },
+                "C2": {
+                    "formula": "=IF(A2>10,100,A2)",
+                    "value": 5
+                }
+            }
+        }
+    ]
+}
